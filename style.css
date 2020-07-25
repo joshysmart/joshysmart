@@ -1,0 +1,260 @@
+body {
+ margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	color:#fff;
+}
+
+.wrapper {
+ width: 100%;
+}
+
+.hero {
+ position: relative;
+	width: 100%;
+	height: 400px;
+ box-sizing: border-box;
+ 
+	/* padding: 30px; */
+	/* color: #fff; */
+ /* margin-bottom: 200px; */
+ background: #000;
+}
+
+.hero:after {
+ position: absolute;
+	/* width: 100%; */
+	/* height: 100%; */
+	content: '';
+	background: inherit;
+	z-index: -3;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	transform-origin: top right;
+	transform: skewY(-4deg);
+
+}
+
+nav {
+	position: relative;
+	background: #000000;
+	color: #fff;
+	z-index: 1;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 15px 35px;
+	font-family: serif;
+	font-size: 1.2em;
+}
+
+.menu ul {
+	display: flex;
+	color: #fff;
+	align-items: center;
+	justify-content: space-between;
+	list-style-type: none;
+}
+
+.menu ul li a {
+	color: white;
+	text-decoration: none;
+	padding: 10px;
+}
+
+.intro {
+	position: relative;
+	width: 350px;
+	margin: 80px auto;
+	/* background: red; */
+	text-align: center;
+	font-family: serif;
+	z-index: 1;
+}
+
+.intro h3 {
+	font-size: 1.8em;
+	margin-bottom: 20px;
+}
+
+.intro p {
+	font-family: serif;
+	font-size: 1.2em;
+	margin-bottom: 20px;
+}
+
+.typed-text {
+	color: #ff7f50;
+}
+.cursor {
+	display: inline-block;
+	width: 2.5px;
+	background: #ccc;
+	margin-left: 0.1em;
+	animation: blink 1s infinite;
+}
+
+@keyframes blink {
+	49% { background: #ccc;}
+	50% {background: none;}
+	99% { background: none;}
+}
+
+.intro-button {
+	width: 180px;
+	padding: 10px;
+	margin: 0 auto;
+	border-radius: 25px;
+	font-family: serif;
+	font-size: 1.6em;
+	background-image: linear-gradient(to left, #3030b6, #3030b6, #0DC8B5);
+	background-size: 200%;
+	transition: .6s;
+	cursor: pointer;
+}
+
+.intro-button:hover {
+	background-position: right;
+}
+.about {
+	/* width: 100%; */
+	display: flex;
+	/* align-items: center; */
+	justify-content: space-evenly;
+	color: #000;
+	margin-top: 100px;
+	padding: 0 35px;
+}
+
+.about-me, .progress {
+	width: 50%;
+}
+
+.progress .circle img {
+	width: 300px;
+	height: 300px;
+}
+.progress {
+	display: flex;
+}
+.recent {
+	color: #000;
+	padding: 0 35px;
+	margin-bottom: 100px;
+}
+.recent-title {
+	width: 350px;
+	margin: 60px auto;
+	text-align: center;
+}
+.recent-title h1 {
+	margin: 0;
+}
+.recent-title p {
+	margin: 0;
+}
+.item {
+	/* width: 150px; */
+	height: 300px;
+	background: #000;
+}
+.recent-works {
+	color: #fff;
+	/* width: 90%; */
+	margin: auto;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 30px;
+	/* margin: 50px auto; */
+}
+.contact {
+ position: relative;
+	width: 100%;
+	/* height: 100px; */
+	box-sizing: border-box;
+	/* padding: 30px; */
+	/* color: #fff; */
+ padding-bottom: 100px;
+ background: #0DC8B5;
+}
+
+.contact:after {
+ position: absolute;
+	/* width: 100%; */
+	/* height: 100%; */
+	content: '';
+ background: inherit;
+ outline: 0;
+	z-index: -2;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	transform-origin: bottom right;
+	transform: skewY(4deg);
+}
+.contact-me {
+	width: 350px;
+	margin: 60px auto;
+	text-align: center;
+}
+.contact-me h1 {
+	margin: 0;
+}
+.contact-me p {
+	margin: 0;
+}
+.contact-form {
+	position: relative;
+	width: 70%;
+	background: #000;
+	display: flex;
+	justify-content: space-between;
+	margin: auto;
+	z-index: 1;
+}
+
+.form {
+	width: 50%;
+	background: #fff;
+	padding: 50px;
+	color: #000;
+}
+input[type=text], input[type=password], input[type=email], textarea {
+	width: 100%;
+	padding: 8px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 0;
+	/* border: 1px solid #000; */
+	border-bottom: 1px solid #ccc;
+	box-sizing: border-box;
+	resize: none;
+	outline: none;
+}
+.send {
+	/* width: 50px; */
+	color: #fff;
+	background: #000;
+	border: 0;
+	border-radius: 25px;
+	padding: 10px 20px;
+	font-size: 1em;
+	outline: none;
+	cursor: pointer;
+}
+.address {
+	width: 50%;
+	padding: 50px;
+	color: #fff;
+}
+canvas {
+ position: absolute;
+ top: 0;
+ left: 0;
+ /* z-index: -1; */
+ /* display: block; */
+ /* background: #0f0; */
+}

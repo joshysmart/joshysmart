@@ -96,6 +96,10 @@ nav {
 	animation: blink 1s infinite;
 }
 
+.typing {
+	animation: none;
+}
+
 @keyframes blink {
 	49% { background: #ccc;}
 	50% {background: none;}

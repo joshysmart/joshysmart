@@ -7,11 +7,8 @@ const contactSection = document.querySelector('.contact');
 const heroCtx = heroCanvas.getContext('2d');
 const contactCtx = contactCanvas.getContext('2d');
 
-const [heroWidth, heroHeight] = [heroSection.clientWidth, heroSection.clientHeight];
-const [contactWidth, contactHeight] = [contactSection.clientWidth, contactSection.clientHeight];
-
-[heroCanvas.width, heroCanvas.height] = [heroWidth, heroHeight];
-[contactCanvas.width, contactCanvas.height] = [contactWidth, contactHeight];
+[heroCanvas.width, heroCanvas.height] = [heroSection.clientWidth, heroSection.clientHeight];
+[contactCanvas.width, contactCanvas.height] = [contactSection.clientWidth, contactSection.clientHeight];
 
 
 const mouse = {
@@ -35,23 +32,22 @@ const heroColorArray = [
 let heroCircleArray = [];
 let contactCircleArray = [];
 
-// const heroColor = heroColorArray[Math.floor(Math.random() * heroColorArray.length - 1)];
-// const contactColor = contactColorArray[Math.floor(Math.random() * contactColorArray.length - 1)];
-
-
 window.addEventListener('mousemove', (e) => {
    mouse.x = e.x;
    mouse.y = e.y;
-   // console.log(mouse.x);
 })
 
 window.addEventListener('resize', () => {
-   [heroCanvas.width, heroCanvas.height] = [heroWidth, heroHeight];
-   [contactCanvas.width, contactCanvas.height] = [contactWidth, contactHeight];
 
-   init(heroWidth, heroHeight, heroCircleArray, heroColorArray, heroCtx);
-   init(contactWidth, contactHeight, contactCircleArray,contactColorArray,contactCtx);
-   });
+   [heroCanvas.width, heroCanvas.height] = [heroSection.clientWidth, heroSection.clientHeight];
+   [contactCanvas.width, contactCanvas.height] = [contactSection.clientWidth, contactSection.clientHeight];
+   
+   heroCircleArray = [];
+   contactCircleArray = [];
+
+   init(heroCanvas.width, heroCanvas.height, heroCircleArray, heroColorArray, heroCtx);
+   init(contactCanvas.width, contactCanvas.height, contactCircleArray,contactColorArray,contactCtx);
+});
 
 class Circle {
    constructor(x, y, radius, dx, dy, ctx, colorArray, width, height) {
@@ -102,17 +98,16 @@ function init(canvasWidth, canvasHeight, circleArray, colorArray, ctx) {
    }
 }
 
-init(heroWidth, heroHeight, heroCircleArray, heroColorArray, heroCtx);
-init(contactWidth, contactHeight, contactCircleArray,contactColorArray,contactCtx);
+init(heroCanvas.width, heroCanvas.height, heroCircleArray, heroColorArray, heroCtx);
+init(contactCanvas.width, contactCanvas.height, contactCircleArray,contactColorArray,contactCtx);
 
 function animate() {
    requestAnimationFrame(animate);
-   heroCtx.clearRect(0, 0, heroWidth, heroHeight);
-   contactCtx.clearRect(0, 0, contactWidth, contactHeight);
+   heroCtx.clearRect(0, 0, heroCanvas.width, heroCanvas.height);
+   contactCtx.clearRect(0, 0, contactCanvas.width, contactCanvas.height);
    for (let i = 0; i < noOfParticles; i++) {
       heroCircleArray[i].update();
       contactCircleArray[i].update();
-      // console.log(heroCircleArray)
    }
 }
 animate();

@@ -1,9 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@1&family=Roboto&display=swap');
 
+* {
+	box-sizing: border-box;
+}
 body {
  margin: 0;
 	padding: 0;
-	box-sizing: border-box;
 	color:#fff;
 	font-family: 'Montserrat', sans-serif;
 }
@@ -11,23 +13,17 @@ body {
 .wrapper {
  width: 100%;
 }
-
 .hero {
- position: relative;
+	position: relative;
 	width: 100%;
 	height: 400px;
  box-sizing: border-box;
- 
-	/* padding: 30px; */
-	/* color: #fff; */
- /* margin-bottom: 200px; */
- background: #000;
+	background: #000;
+
 }
 
 .hero:after {
- position: absolute;
-	/* width: 100%; */
-	/* height: 100%; */
+	position: absolute;
 	content: '';
 	background: inherit;
 	z-index: -3;
@@ -37,9 +33,10 @@ body {
 	left: 0;
 	transform-origin: top right;
 	transform: skewY(-4deg);
-
+	
 }
 
+@media only screen and (min-width: 768px) {
 nav {
 	position: relative;
 	background: #000000;
@@ -53,6 +50,9 @@ nav {
 	font-size: 1.2em;
 }
 
+.top-nav .stack-open {
+	display: none;
+}
 .menu ul {
 	display: flex;
 	color: #fff;
@@ -71,7 +71,6 @@ nav {
 	position: relative;
 	width: 350px;
 	margin: 80px auto;
-	/* background: red; */
 	text-align: center;
 	font-family: serif;
 	z-index: 1;
@@ -125,10 +124,13 @@ nav {
 .intro-button:hover {
 	background-position: right;
 }
+
+.intro-button a {
+	text-decoration: none;
+	color: #fff;
+}
 .about {
-	/* width: 100%; */
 	display: flex;
-	/* align-items: center; */
 	justify-content: space-evenly;
 	color: #000;
 	margin-top: 100px;
@@ -163,34 +165,26 @@ nav {
 	margin: 0;
 }
 .item {
-	/* width: 150px; */
 	height: 300px;
 	background: #000;
 }
 .recent-works {
 	color: #fff;
-	/* width: 90%; */
 	margin: auto;
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	grid-gap: 30px;
-	/* margin: 50px auto; */
 }
 .contact {
  position: relative;
 	width: 100%;
-	/* height: 100px; */
 	box-sizing: border-box;
-	/* padding: 30px; */
-	/* color: #fff; */
  padding-bottom: 100px;
  background: #0DC8B5;
 }
 
 .contact:after {
  position: absolute;
-	/* width: 100%; */
-	/* height: 100%; */
 	content: '';
  background: inherit;
  outline: 0;
@@ -235,14 +229,12 @@ input[type=text], input[type=password], input[type=email], textarea {
 	margin: 8px 0;
 	display: inline-block;
 	border: 0;
-	/* border: 1px solid #000; */
 	border-bottom: 1px solid #ccc;
 	box-sizing: border-box;
 	resize: none;
 	outline: none;
 }
 .send {
-	/* width: 50px; */
 	color: #fff;
 	background: #000;
 	border: 0;
@@ -261,7 +253,252 @@ canvas {
  position: absolute;
  top: 0;
  left: 0;
- /* z-index: -1; */
- /* display: block; */
- /* background: #0f0; */
 }
+}
+
+@media only screen and (width: 768px) {
+	.about {
+		display: block;
+	}
+	.about-me, .progress {
+		width: 100%;
+		margin-bottom: 50px;
+	}
+	.form, .address {
+		padding: 20px;
+	}
+	}
+
+	@media only screen and (max-width: 600px) {
+		.hero {
+			width: 100%;
+			height: auto;
+			padding-bottom: 10px;
+		}
+
+		nav {
+			position: relative;
+			background: #000000;
+			color: #fff;
+			z-index: 1;
+			display: inline-block;
+			padding: 15px 35px;
+			font-family: serif;
+			font-size: 1.2em;
+			width: 100%;
+		}
+
+				
+		nav .top-nav {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+	
+		.menu ul {
+			display: none;
+			width: 100%;
+			color: #fff;
+			list-style-type: none;
+			text-align: center;
+			padding: 10px 0;
+			font-size: 0.8em;
+			margin: 0 auto;
+		}
+		
+		
+		.menu ul li a {
+			color: white;
+			text-decoration: none;
+		}
+		
+		.intro {
+			position: relative;
+			width: 250px;
+			margin: 20px auto;
+			text-align: center;
+			font-family: serif;
+			z-index: 1;
+		}
+		
+		.intro h3 {
+			font-size: 1.2em;
+			margin-bottom: 20px;
+		}
+		
+		.intro p {
+			font-family: serif;
+			font-size: .8em;
+			margin-bottom: 20px;
+		}
+		
+		.typed-text {
+			color: #ff7f50;
+		}
+		.cursor {
+			display: inline-block;
+			width: 2.5px;
+			background: #ccc;
+			margin-left: 0.1em;
+			animation: blink 1s infinite;
+		}
+		
+		.typing {
+			animation: none;
+		}
+		
+		@keyframes blink {
+			49% { background: #ccc;}
+			50% {background: none;}
+			99% { background: none;}
+		}
+
+		.intro-button {
+			width: 120px;
+			padding: 10px;
+			margin: 0 auto;
+			border-radius: 25px;
+			font-family: serif;
+			font-size: 1em;
+			background-image: linear-gradient(to left, #3030b6, #3030b6, #0DC8B5);
+			background-size: 200%;
+			transition: .6s;
+			cursor: pointer;
+		}
+		
+		.intro-button:hover {
+			background-position: right;
+		}
+
+		.intro-button a {
+			text-decoration: none;
+			color: #fff;
+		}
+	
+		.about {
+			width: 100%;
+			display: inline-block;
+			color: #000;
+			margin-top: 20px;
+			padding: 0 35px;
+		}
+		
+		.about-me, .progress {
+			width: 100%;
+		}
+
+		.progress .circle img {
+			width: 200px;
+			height: 200px;
+		}
+		.progress .circle {
+			margin: auto;
+			width: 200px;
+		}
+		
+		.recent {
+			color: #000;
+			padding: 0 35px;
+		}
+		.recent-title {
+			width: 250px;
+			margin: 30px auto;
+			text-align: center;
+		}
+		.recent-title h1 {
+			margin: 0;
+		}
+		.recent-title p {
+			margin: 0;
+			font-size: 0.8em;
+		}
+		.item {
+			height: 150px;
+			background: #000;
+		}
+		.recent-works {
+			color: #fff;
+			margin: auto;
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			grid-gap: 20px;
+		}
+		
+		.contact {
+			position: relative;
+			width: 100%;
+			background: #0DC8B5;
+			padding: 0 35px;
+			padding-bottom: 50px;
+		}
+		
+		.contact:after {
+			position: absolute;
+			content: '';
+			background: inherit;
+			outline: 0;
+			z-index: -2;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			transform-origin: bottom right;
+			transform: skewY(4deg);
+		}
+		.contact-me {
+			margin: 30px auto;
+			text-align: center;
+		}
+		.contact-me h1 {
+			margin: 0;
+		}
+		.contact-me p {
+			margin: 0;
+			font-size: 0.8em;
+
+		}
+		.contact-form {
+			position: relative;
+			background: #000;
+			display: inline-block;
+			z-index: 1;
+		}
+		
+		.form {
+			background: #fff;
+			padding: 30px;
+			color: #000;
+		}
+		input[type=text], input[type=password], input[type=email], textarea {
+			width: 100%;
+			padding: 8px 20px;
+			margin: 8px 0;
+			display: inline-block;
+			border: 0;
+			border-bottom: 1px solid #ccc;
+			box-sizing: border-box;
+			resize: none;
+			outline: none;
+		}
+		.send {
+			color: #fff;
+			background: #000;
+			border: 0;
+			border-radius: 25px;
+			padding: 10px 20px;
+			font-size: .9em;
+			outline: none;
+			cursor: pointer;
+		}
+		.address {
+			padding: 30px;
+			color: #fff;
+		}
+		canvas {
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+	}
+
+

@@ -9,17 +9,18 @@
 </head>
 <body>
   <div class="wrapper">
-    <section class="hero">
+    <section class="hero" id="home">
       <nav>
-        <div>
+        <div class="top-nav">
           <img src="./icons/logo.svg" alt="">
+          <img class="stack-open" src="./icons/stack.svg" alt="">
         </div>
         <div class="menu">
           <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Projects</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#recent">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
           </ul>
         </div>
       </nav>
@@ -27,12 +28,12 @@
       <div class="intro">
         <h3>Hello Welcome to my Page</h3>
         <p>I am <span class="typed-text"></span><span class="cursor">&nbsp;</span></p>
-        <div class="intro-button">Work with me</div>
+        <div class="intro-button"><a href="#form">Work with me</a></div>
       </div>
 
       <canvas class="hero-canvas"></canvas>
     </section>
-    <section class="about">
+    <section class="about" id="about">
       <div class="about-me">
         <h1>About Me</h1>
         <p>I am a freelancer in web development, with experience building highly responsive and mobile friendly web apps. i am also knowledged in software engineering, visual design, and javascript frameworks.i am driven by her passion for understanding the variations programming. i consider myself an eager learner to keep to date with the required skills for professional development. I am also cooperative with clients and always interested in a challenge. Do reach out to me to ensure satisfactory results.
@@ -44,7 +45,7 @@
         <div class="circle"><img src="./icons/circle.svg" alt=""></div>
       </div>
     </section>
-    <section class="recent">
+    <section class="recent" id="recent">
       <div class="recent-title">
         <h1>Recent Projects</h1>
         <p>Here are some of my recent accomplishments</p>
@@ -58,13 +59,13 @@
         <div class="item">6</div>
       </div>
     </section>
-    <section class="contact">
+    <section class="contact" id="contact">
       <div class="contact-me">
         <h1>Contact me</h1>
         <p>I would love to hear from you</p>
       </div>
       <div class="contact-form">
-        <div class="form">
+        <div class="form" id="form">
           <form action="action_page.php">
             <div class="container">
               <label for="name"><b>Name</b></label>

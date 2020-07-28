@@ -173,13 +173,11 @@ function toggle() {
    if (!toggleStack.classList.contains('open')) {
       toggleStack.classList.add('open');
       toggleStack.src = './icons/stack-open.svg';
-      menu.style.display = 'block';
-      reset();
+      menu.style.opacity = '1';
    } else {
       toggleStack.classList.remove('open');
       toggleStack.src = './icons/stack.svg';
-      menu.style.display = 'none';
-      reset();
+      menu.style.opacity = '0';
    }
 
 }

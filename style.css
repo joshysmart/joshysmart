@@ -321,8 +321,11 @@ canvas {
 		}
 		
 	
+		.menu ul li {
+			padding: 5px;
+		}
 		.menu ul li a {
-			color: white;
+			color: #ffffff;
 			text-decoration: none;
 		}
 

@@ -161,3 +161,24 @@ window.addEventListener('load', () => {
 /* ==================>
 TYPING ENDS
 <=================== */
+
+/* ==================>
+TOGGLE MENU
+<=================== */
+
+const toggleStack = document.querySelector('.stack-open');
+const menu = document.querySelector('.menu ul');
+
+function toggle() {
+   if (!toggleStack.classList.contains('open')) {
+      toggleStack.classList.add('open');
+      toggleStack.src = './icons/stack-open.svg';
+      menu.style.display = 'block'
+   } else {
+      toggleStack.classList.remove('open');
+      toggleStack.src = './icons/stack.svg';
+      menu.style.display = 'none'
+   }
+
+}
+toggleStack.addEventListener('click', toggle)

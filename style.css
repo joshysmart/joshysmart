@@ -13,6 +13,7 @@ body {
 .wrapper {
  width: 100%;
 }
+
 .hero {
 	position: relative;
 	width: 100%;
@@ -20,7 +21,7 @@ body {
 	background: #000;
 	padding-bottom: 0.1px;
 
-}
+} 
 
 .hero:after {
 	position: absolute;
@@ -37,17 +38,17 @@ body {
 }
 
 @media only screen and (min-width: 768px) {
-nav {
+.nav {
 	position: relative;
 	background: #000000;
 	color: #fff;
-	z-index: 1;
+	z-index: 2;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 	padding: 15px 35px;
 	font-family: serif;
-	font-size: 1.2em;
+	font-size: 1.5em;
 }
 
 .top-nav .stack-open {
@@ -64,27 +65,39 @@ nav {
 .menu ul li a {
 	color: white;
 	text-decoration: none;
-	padding: 10px;
+	margin: 10px;
+	transition: all .2s;
 }
+.menu ul li a:hover {
+	padding: 5px 2px;
+	border-bottom: 2px solid #0DC8B5;
+}
+.menu ul li a:active {
+	padding: 5px 2px;
+	border-bottom: 2px solid #fff;
+}
+
 
 .intro {
 	position: relative;
-	width: 350px;
-	margin: 80px auto;
+	min-width: 500px;
 	text-align: center;
 	font-family: serif;
 	z-index: 1;
+	padding-top: 100px;
+	padding-bottom: 100px;
 }
 
 .intro h3 {
-	font-size: 1.8em;
-	margin-bottom: 20px;
+	font-size: 2.5em;
+	margin-bottom: 35px;
+	margin-top: 0px;
 }
 
 .intro p {
 	font-family: serif;
-	font-size: 1.2em;
-	margin-bottom: 20px;
+	font-size: 2em;
+	margin-bottom: 35px;
 }
 
 .typed-text {
@@ -109,12 +122,12 @@ nav {
 }
 
 .intro-button {
-	width: 180px;
+	width: 200px;
 	padding: 10px;
 	margin: 0 auto;
 	border-radius: 25px;
 	font-family: serif;
-	font-size: 1.6em;
+	font-size: 1.8em;
 	background-image: linear-gradient(to left, #3030b6, #3030b6, #0DC8B5);
 	background-size: 200%;
 	transition: .6s;
@@ -256,6 +269,7 @@ canvas {
 }
 }
 
+
 @media only screen and (width: 768px) {
 	.about {
 		display: block;
@@ -280,7 +294,7 @@ canvas {
 			position: relative;
 			background: #000000;
 			color: #fff;
-			z-index: 1;
+			z-index: 2;
 			display: inline-block;
 			padding: 15px 1rem;
 			font-family: serif;
@@ -306,29 +320,41 @@ canvas {
 			margin: 0 auto;
 		}
 		
-		
+	
 		.menu ul li a {
 			color: white;
 			text-decoration: none;
 		}
-		
-		.intro {
+
+		.menu ul li a:hover {
+			padding: 5px 2px;
+			border-bottom: 2px solid #0DC8B5;
+		}
+		.menu ul li a:active {
+			padding: 5px 2px;
+			border-bottom: 2px solid #fff;
+		}
+
+			.intro {
 			position: relative;
-			width: 250px;
-			margin: 20px auto;
+			min-width: 250px;
 			text-align: center;
 			font-family: serif;
 			z-index: 1;
+			padding-top: 100px;
+			padding-bottom: 100px;
+
 		}
 		
 		.intro h3 {
-			font-size: 1.2em;
+			font-size: 1.6em;
+			margin-top: 0;
 			margin-bottom: 20px;
 		}
 		
 		.intro p {
 			font-family: serif;
-			font-size: .8em;
+			font-size: 1.2em;
 			margin-bottom: 20px;
 		}
 		
@@ -353,13 +379,14 @@ canvas {
 			99% { background: none;}
 		}
 
+
 		.intro-button {
-			width: 120px;
+			width: 150px;
 			padding: 10px;
 			margin: 0 auto;
 			border-radius: 25px;
 			font-family: serif;
-			font-size: 1em;
+			font-size: 1.2em;
 			background-image: linear-gradient(to left, #3030b6, #3030b6, #0DC8B5);
 			background-size: 200%;
 			transition: .6s;
@@ -501,5 +528,4 @@ canvas {
 			left: 0;
 		}
 	}
-
 

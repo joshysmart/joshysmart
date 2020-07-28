@@ -10,21 +10,21 @@
    xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="50"
-   height="20"
-   viewBox="0 0 13.229166 5.291667"
+   width="55"
+   height="30"
+   viewBox="0 0 14.552081 7.9375008"
    version="1.1"
    id="svg8"
    inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
-   sodipodi:docname="logo1.svg">
+   sodipodi:docname="logo.svg">
   <defs
      id="defs2">
     <inkscape:perspective
        sodipodi:type="inkscape:persp3d"
-       inkscape:vp_x="-14.337531 : 173.53914 : 1"
-       inkscape:vp_y="80.289668 : -691.63896 : 0"
-       inkscape:vp_z="66.614987 : 191.94448 : 1"
-       inkscape:persp3d-origin="22.314938 : 215.6811 : 1"
+       inkscape:vp_x="-14.337528 : 173.53915 : 1"
+       inkscape:vp_y="80.289658 : -691.639 : 0"
+       inkscape:vp_z="66.61498 : 191.94449 : 1"
+       inkscape:persp3d-origin="22.314934 : 215.68111 : 1"
        id="perspective2706" />
     <linearGradient
        inkscape:collect="always"
@@ -57,7 +57,7 @@
      inkscape:pageshadow="2"
      inkscape:zoom="8.8365423"
      inkscape:cx="23.347263"
-     inkscape:cy="3.7137679"
+     inkscape:cy="7.2931164"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -75,7 +75,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -83,10 +83,10 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(0,-291.70831)">
+     transform="translate(0,-289.06248)">
     <g
        id="g5757"
-       transform="translate(-0.00130787,0.12888735)"
+       transform="matrix(1.0917828,0,0,1.4127121,0.05292545,-122.62435)"
        style="fill:#ffffff">
       <path
          inkscape:connector-curvature="0"

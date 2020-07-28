@@ -310,8 +310,7 @@ canvas {
 		}
 
 		.menu ul {
-			position: fixed;
-			opacity: 0;
+			display: none;
 			width: 100%;
 			color: #fff;
 			list-style-type: none;
@@ -319,7 +318,6 @@ canvas {
 			padding: 10px 0;
 			font-size: 1em;
 			margin: 0 auto;
-			transition: opacity 1s cubic-bezier(0.53, 0.13, 0.41, 0.91);
 			background: #000;
 		}
 	

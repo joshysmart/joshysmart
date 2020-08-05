@@ -152,6 +152,7 @@ body {
 
 .about-me, .progress {
 	width: 50%;
+	line-height: 25px;
 }
 
 .progress .circle img {
@@ -277,6 +278,7 @@ canvas {
 	.about-me, .progress {
 		width: 100%;
 		margin-bottom: 50px;
+		line-height: 25px;
 	}
 	.form, .address {
 		padding: 20px;
@@ -415,6 +417,7 @@ canvas {
 		
 		.about-me, .progress {
 			width: 100%;
+			line-height: 25px;
 		}
 
 		.progress .circle img {

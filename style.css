@@ -11,6 +11,11 @@ body {
 	font-family: 'Montserrat', sans-serif;
 }
 
+@media only screen and (max-width: 350px) {
+	body {
+		font-size: .8em;
+	}
+}
 a {
 	text-decoration: none;
 }
@@ -291,7 +296,6 @@ a {
 	color: #fff;
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
-	grid-template-rows: repeat(3, 1fr);
 	grid-gap: 30px;
 }
 

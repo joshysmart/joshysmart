@@ -75,6 +75,7 @@ a {
 @media only screen and (max-width: 300px) {
 	.menu ul li a {
 		font-size: .6em;
+		margin: 5px;
 	}
 }
 
@@ -110,7 +111,7 @@ a {
 
 @media only screen and (max-width: 300px) {
 	.intro h3 {
-		font-size: 1.4em;
+		font-size: 1.2em;
 	}
 }
 
@@ -253,8 +254,8 @@ a {
 
 @media only screen and (max-width: 300px) {
 	.progress .circle img {
-		width: 200px;
-		height: 200px;	
+		width: 150px;
+		height: 150px;	
 	}
 }
 
@@ -289,21 +290,19 @@ a {
 	color: #fff;
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
-	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(3, 1fr);
 	grid-gap: 30px;
 }
 
 @media only screen and (max-width: 768px) {
 	.recent-works {
 		grid-template-columns: repeat(2, 1fr);
-		grid-template-columns: repeat(2, 1fr);	
 	}
 }
 
 @media only screen and (max-width: 650px) {
 	.recent-works {
 		grid-template-columns: repeat(1, 1fr);
-		grid-template-columns: repeat(1, 1fr);	
 	}
 }
 

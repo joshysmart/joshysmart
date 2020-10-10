@@ -119,7 +119,7 @@ TYPING EFFECT
 const typedTextSpan = document.querySelector('.typed-text');
 const cursorSpan = document.querySelector('.cursor');
 
-const textArray = ['Joshysmart', 'a web developer ', 'a software engineer'];
+const textArray = ['Front End Developer', 'Web Designer ', 'Software Developer'];
 const typingDelay = 200;
 const erasingDelay = 100;
 const newTextDelay = 2000;

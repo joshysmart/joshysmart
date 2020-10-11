@@ -169,18 +169,12 @@ const imgContainer = document.querySelectorAll('.img-cont');
 const prev = document.querySelectorAll('.prev');
 const next = document.querySelectorAll('.next');
 
-// let position = 0;
-let prevTarget = 0;
-let newTarget = 0;
-
 function getTarget(e) {
  const targetImgContainer = imgContainer[e.target.dataset.index];
  const width = targetImgContainer.clientWidth;
  const targetImgContainerChildren = targetImgContainer.querySelectorAll('.img');
  const end = width * (targetImgContainerChildren.length - 1);
  let position = Number(targetImgContainer.dataset.position);
-//  const prevEl = prev[e.target.dataset.index];
-//  const nextEl = next[e.target.dataset.index];
 
  if (e.target.classList.contains('prev') && position < 0) {
   position += width;
@@ -198,3 +192,6 @@ function slideImg(targetImgContainer, position) {
 
 prev.forEach(el => el.addEventListener('click', getTarget, true));
 next.forEach(el => el.addEventListener('click', getTarget, true));
+/* ==================>
+SLIDE IMAGES ENDS
+<=================== */

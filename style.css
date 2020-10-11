@@ -328,7 +328,11 @@ a {
 	transition: all .4s ease-in-out;
 }
 
-.recent-works .item:hover .img-cont{
+.recent-works .item .img-wrapper{
+	transition: all .4s ease-in-out;
+}
+
+.recent-works .item:hover .img-wrapper{
 	transform: scale(1.1);
 }
 
@@ -352,6 +356,7 @@ a {
 	padding: 0 5px;
 	transition: all .4s ease-in-out;
 	cursor: url('./images/cursor.svg'), auto;
+	user-select: none;
 }
 
 .recent-works .item .slide .prev {

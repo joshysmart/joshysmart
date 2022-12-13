@@ -1191,6 +1191,10 @@ svg:hover path {
     margin-left: calc(9rem * calc(1 - var(--tw-space-x-reverse)));
   }
 
+  .lg\:p-0 {
+    padding: 0px;
+  }
+
   .lg\:px-8 {
     padding-left: 2rem;
     padding-right: 2rem;

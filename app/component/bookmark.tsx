@@ -1,6 +1,6 @@
 const Bookmark = (props: {tech:string[], bookmark:string}) => {
   return (
-    <section className="flex flex-col items-center justify-between lg:items-start lg:w-2/5">
+    <section className="flex flex-col items-center justify-between lg:items-start lg:w-2/5 px:4 md:px-8 lg:p-0">
       <h3 className="text-pureWhite font-bold text-4xl mb-8 text-center lg:text-left">Bookmark</h3>
       <p className="text-lightGray  text-base font-medium md:text-lg  text-center lg:text-left ">{props.bookmark}</p>
       <p className="text-lightGreen   text-base font-medium md:text-lg  text-center mt-4 lg:text-left">Interactive Design  / Front End Development {props.tech?.map((el:any,i:number) => <span key={i}>{el} {i < props.tech.length - 1 ? "/ " : ""}</span>)} </p>

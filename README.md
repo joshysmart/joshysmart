@@ -10,4 +10,4 @@ I am **joshysmart**
 - 📫 How to reach me: [telegram](t.me/joshysmart)
 - ⚡ Fun fact: Worldwide Web was programmed with Objective C."
 
-Here is a live version of my [portfolio](https://joshysmart.github.io/joshysmart/)
+Here is a live version of my [portfolio](https://joshysmart.vercel.app/)

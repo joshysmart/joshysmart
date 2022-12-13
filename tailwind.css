@@ -1,0 +1,192 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Space Grotesk';
+  src: url("../../public/assets/fonts/SpaceGrotesk-VariableFont_wght.ttf") format('woff2'),
+    url('../../public/assets/fonts/static/SpaceGrotesk-Bold.ttf') format('woff2'),
+    url('../../public/assets/fonts/static/SpaceGrotesk-Medium.ttf') format('woff2');
+  font-weight: 100 1000;
+  font-stretch: 25% 151%;
+}
+
+body {
+  font-family: "Space Grotesk";
+  font-style: normal;
+  background: #151515;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.wrapper {
+  background-image: url("../../public/assets/images/pattern-rings.svg"),
+    url("../../public/assets/images/pattern-circle.svg"),
+    url("../../public/assets/images/pattern-rings.svg");
+  background-repeat: no-repeat;
+  background-position: -342px 155px, 310px 280px, 215px 1244px;
+}
+
+@media only screen and (min-width:768px) {
+  .wrapper {
+    background-position: -342px 90px, 610px 280px, 520px 1144px;
+  }
+}
+
+@media only screen and (min-width:1280px) {
+  .wrapper {
+    background-position: -342px 120px, 1210px 680px, 1190px 1044px;
+  }
+}
+
+
+.hero .right-section {
+  width: 174px;
+  height: 242px;
+}
+
+.hero .right-section .image {
+  width: 100%;
+  height: 100%;
+  background-image: url("../../public/assets/images/profile-image-mobile.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
+@media only screen and (min-width:768px) {
+  .hero .right-section {
+    width: 322px;
+    height: 610px;
+    position: absolute;
+    right: 0;
+    top: 0px;
+    display: flex;
+    align-items: flex-end;
+    background: #242424;
+  }
+
+  .hero .right-section .image {
+    height: 450px;
+    position: absolute;
+    background-image: url("../../public/assets/images/profile-image-tablet.png");
+    background-size: cover;
+  }
+}
+
+@media only screen and (min-width:1280px) {
+  .hero .right-section {
+    width: 445px;
+    height: 700px;
+    right: 2rem;
+    top: 0px;
+    display: flex;
+    align-items: flex-end;
+    background: #242424;
+    ;
+  }
+
+  .hero .right-section .image {
+    height: 618px;
+    position: absolute;
+    background-image: url("../../public/assets/images/profile-image-desktop.png");
+    background-size: cover;
+  }
+}
+
+@media only screen and (min-width:1440px) {
+  .hero .right-section {
+    width: 445px;
+    height: 700px;
+    right: 10rem;
+    top: 0px;
+    display: flex;
+    align-items: flex-end;
+    background: #242424;
+    ;
+  }
+
+  .hero .right-section .image {
+    height: 618px;
+    position: absolute;
+    background-image: url("../../public/assets/images/profile-image-desktop.png");
+    background-size: cover;
+  }
+}
+
+.project .portfolio-hero .image {
+  width: 100%;
+  height: 255px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.project .preview .image {
+  width: 100%;
+  height: 255px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.audiophile .portfolio-hero .image {
+  background-image: url("../../public/assets/images/audiophile-hero.webp");
+}
+
+.audiophile .top-section .image {
+  background-image: url("../../public/assets/images/audiophile-one.webp");
+}
+
+.audiophile .bottom-section .image {
+  background-image: url("../../public/assets/images/audiophile-two.webp");
+}
+
+.invoice-app .portfolio-hero .image {
+  background-image: url("../../public/assets/images/invoice-hero.webp");
+}
+
+
+.invoice-app .top-section .image {
+  background-image: url("../../public/assets/images/invoice-one.webp");
+}
+
+.invoice-app .bottom-section .image {
+  background-image: url("../../public/assets/images/invoice-two.webp");
+}
+
+
+.url-shortner .portfolio-hero .image {
+  background-image: url("../../public/assets/images/url-shortner-one.webp");
+}
+
+
+.url-shortner .top-section .image {
+  background-image: url("../../public/assets/images/url-shortner-one.webp");
+}
+
+.url-shortner .bottom-section .image {
+  background-image: url("../../public/assets/images/url-shortner-two.webp");
+}
+
+.footer {
+  background-image: url("../../public/assets/images/pattern-rings.svg");
+  background-repeat: no-repeat;
+  background-position: -342px 468px;
+}
+
+@media only screen and (min-width:768px) {
+  .footer {
+    background-position: -342px 568px;
+  }
+}
+
+@media only screen and (min-width:1280px) {
+  .footer {
+    background-position: -342px 320px;
+  }
+}
+
+svg:hover path {
+  fill: #4EE1A0;
+}

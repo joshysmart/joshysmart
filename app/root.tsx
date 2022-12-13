@@ -32,9 +32,7 @@ export const meta: MetaFunction = () => ({
 export default function App() {
   return (
     <Document title="Sani Joshua">
-      <Header />
       <Outlet />
-      <Footer/>
       <ScrollRestoration />
       <Scripts />
       <LiveReload />

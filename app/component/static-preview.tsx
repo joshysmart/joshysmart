@@ -1,12 +1,16 @@
 const StaticPreview = () => {
   return (
-    <section className="preview pb-20">
-      <h3 className="text-pureWhite font-bold text-4xl md:text-7xl max-w-md  px-4 md:px-8 mb-8 text-center">Static Previews</h3>
-      <div className="top-section px-4 mb-6">
-        <div className="image"></div>
+    <section className="preview flex flex-col lg:items-end preview pb-20 px-4 md:px-8 xl:px-40  w-full">
+      <div className="lg:w-1/2">
+        <h3 className="text-pureWhite font-bold text-4xl mb-8 text-center md:text-left lg:text-left">Static Previews</h3>
       </div>
-      <div className="bottom-section px-4">
-        <div className="image"></div>
+      <div className="lg:w-1/2">
+        <div className="top-section mb-6">
+          <div className="image"></div>
+        </div>
+        <div className="bottom-section">
+          <div className="image"></div>
+        </div>
       </div>
     </section>
   )

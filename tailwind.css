@@ -72,7 +72,6 @@ html {
     height: 450px;
     position: absolute;
     background-image: url("../../public/assets/images/profile-image-tablet.png");
-    background-size: cover;
   }
 }
 
@@ -81,11 +80,6 @@ html {
     width: 445px;
     height: 700px;
     right: 2rem;
-    top: 0px;
-    display: flex;
-    align-items: flex-end;
-    background: #242424;
-    ;
   }
 
   .hero .right-section .image {
@@ -98,21 +92,11 @@ html {
 
 @media only screen and (min-width:1440px) {
   .hero .right-section {
-    width: 445px;
-    height: 700px;
     right: 10rem;
-    top: 0px;
-    display: flex;
-    align-items: flex-end;
-    background: #242424;
-    ;
   }
 
   .hero .right-section .image {
-    height: 618px;
-    position: absolute;
     background-image: url("../../public/assets/images/profile-image-desktop.png");
-    background-size: cover;
   }
 }
 
@@ -123,11 +107,29 @@ html {
   background-repeat: no-repeat;
 }
 
+@media only screen and (min-width:768px) {
+  .project .portfolio-hero .image {
+    height: 586px;
+  }
+}
+
+@media only screen and (min-width:768px) {
+  .project .portfolio-hero .image {
+    height: 586px;
+  }
+}
+
 .project .preview .image {
   width: 100%;
   height: 255px;
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+@media only screen and (min-width:768px) {
+  .project .preview .image {
+    height: 400px;
+  }
 }
 
 .audiophile .portfolio-hero .image {

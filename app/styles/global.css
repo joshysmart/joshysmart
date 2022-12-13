@@ -630,6 +630,10 @@ video {
   flex-direction: column-reverse;
 }
 
+.items-end {
+  align-items: flex-end;
+}
+
 .items-center {
   align-items: center;
 }
@@ -883,7 +887,6 @@ html {
     height: 450px;
     position: absolute;
     background-image: url("../../public/assets/images/profile-image-tablet.png");
-    background-size: cover;
   }
 }
 
@@ -892,10 +895,6 @@ html {
     width: 445px;
     height: 700px;
     right: 2rem;
-    top: 0px;
-    display: flex;
-    align-items: flex-end;
-    background: #242424;
   }
 
   .hero .right-section .image {
@@ -908,20 +907,11 @@ html {
 
 @media only screen and (min-width:1440px) {
   .hero .right-section {
-    width: 445px;
-    height: 700px;
     right: 10rem;
-    top: 0px;
-    display: flex;
-    align-items: flex-end;
-    background: #242424;
   }
 
   .hero .right-section .image {
-    height: 618px;
-    position: absolute;
     background-image: url("../../public/assets/images/profile-image-desktop.png");
-    background-size: cover;
   }
 }
 
@@ -932,11 +922,23 @@ html {
   background-repeat: no-repeat;
 }
 
+@media only screen and (min-width:768px) {
+  .project .portfolio-hero .image {
+    height: 586px;
+  }
+}
+
 .project .preview .image {
   width: 100%;
   height: 255px;
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+@media only screen and (min-width:768px) {
+  .project .preview .image {
+    height: 400px;
+  }
 }
 
 .audiophile .portfolio-hero .image {
@@ -1106,6 +1108,14 @@ svg:hover path {
     padding-top: 3rem;
   }
 
+  .md\:pt-32 {
+    padding-top: 8rem;
+  }
+
+  .md\:pb-32 {
+    padding-bottom: 8rem;
+  }
+
   .md\:text-left {
     text-align: left;
   }
@@ -1139,6 +1149,10 @@ svg:hover path {
     display: inline;
   }
 
+  .lg\:w-2\/5 {
+    width: 40%;
+  }
+
   .lg\:w-1\/2 {
     width: 50%;
   }
@@ -1159,6 +1173,14 @@ svg:hover path {
     flex-direction: row;
   }
 
+  .lg\:items-start {
+    align-items: flex-start;
+  }
+
+  .lg\:items-end {
+    align-items: flex-end;
+  }
+
   .lg\:justify-between {
     justify-content: space-between;
   }
@@ -1174,6 +1196,11 @@ svg:hover path {
     padding-right: 2rem;
   }
 
+  .lg\:px-40 {
+    padding-left: 10rem;
+    padding-right: 10rem;
+  }
+
   .lg\:py-20 {
     padding-top: 5rem;
     padding-bottom: 5rem;
@@ -1181,6 +1208,14 @@ svg:hover path {
 
   .lg\:pr-0 {
     padding-right: 0px;
+  }
+
+  .lg\:pt-0 {
+    padding-top: 0px;
+  }
+
+  .lg\:pb-0 {
+    padding-bottom: 0px;
   }
 
   .lg\:text-left {
@@ -1238,5 +1273,9 @@ svg:hover path {
 
   .xl\:pl-40 {
     padding-left: 10rem;
+  }
+
+  .xl\:pt-40 {
+    padding-top: 10rem;
   }
 }

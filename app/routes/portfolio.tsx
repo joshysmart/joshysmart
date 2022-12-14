@@ -61,6 +61,7 @@ export const action = async ({request}:any) => {
   };
 
   console.log("error", transporter);
+  console.log("error", mailOptions);
   
   transporter.sendMail(mailOptions, function(error: any, info: { response: string; }){
     console.log(error);

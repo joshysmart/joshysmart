@@ -61,7 +61,7 @@ export const action = async ({request}:any) => {
   
   const sendMessage = async(mailOptions:any)=> { 
     await transporter.sendMail(mailOptions, function(error: any, info: { response: string; }){
-    console.log(error);
+    console.log(info.response);
 
     if (error) {
       console.log(error);

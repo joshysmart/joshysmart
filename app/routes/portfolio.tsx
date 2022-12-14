@@ -43,7 +43,7 @@ export const action = async ({request}:any) => {
     return badRequest({ fieldErrors, fields });
   }
 
-  var transporter = NodeMailer.createTransport({
+  const transporter = NodeMailer.createTransport({
     service: 'gmail',
     auth: {
       user: 'fifthtribe05@gmail.com',
@@ -51,7 +51,7 @@ export const action = async ({request}:any) => {
     }
   });
   
-  var mailOptions = {
+  const mailOptions = {
     from: email,
     to: 'fifthtribe05@gmail.com',
     subject: 'I have a job for you',
@@ -59,6 +59,8 @@ export const action = async ({request}:any) => {
   };
   
   transporter.sendMail(mailOptions, function(error: any, info: { response: string; }){
+    console.log(error);
+
     if (error) {
       console.log(error);
     } else {

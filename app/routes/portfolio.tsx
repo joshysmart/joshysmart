@@ -1,12 +1,9 @@
-import AboutMe from "~/component/about-me";
-import Hero from "~/component/hero"
-import Line from "~/component/line";
-import TechStack from "~/component/tech-stack";
+
 import NodeMailer from "nodemailer";
 import { json, redirect } from "@remix-run/node";
 import Header from "~/component/header";
 import Footer from "~/component/footer";
-import { useActionData } from "@remix-run/react";
+import { Outlet, useActionData } from "@remix-run/react";
 
 const validateName = (name:string) => {
   if (name.length < 3) {
@@ -28,7 +25,6 @@ function badRequest(data:any) {
 }
 
 const secretPass = process.env.REACT_APP_PASS
-// const secretPass = process.env.DATABASE_URL
 
 export const action = async ({request}:any) => {
   const formData = await request.formData();
@@ -79,12 +75,8 @@ export default function Index() {
   return (
     <main >
       <Header />
-        <Hero/>
-        <Line/>
-        <TechStack/>
-        <AboutMe/>
+        <Outlet/>
       <Footer actionData={actionData}/>
-
     </main>
   );
 }

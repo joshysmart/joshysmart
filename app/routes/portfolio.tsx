@@ -57,6 +57,8 @@ export const action = async ({request}:any) => {
     subject: 'I have a job for you',
     text: `${message} from ${email}`
   };
+
+  console.log("error", transporter);
   
   transporter.sendMail(mailOptions, function(error: any, info: { response: string; }){
     console.log(error);

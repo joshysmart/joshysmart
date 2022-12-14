@@ -39,11 +39,15 @@ export const action = async ({request}:any) => {
     email: validateEmail(email),
   };
 
+  console.log("error");
+
   if (Object.values(fieldErrors).some(Boolean)) {
     return badRequest({ fieldErrors, fields });
   }
 
   const transporter = NodeMailer.createTransport({
+    host: "smtp.gmail.com",
+    port: 465,
     service: 'gmail',
     secure: true,
     auth: {
@@ -71,6 +75,7 @@ export const action = async ({request}:any) => {
     }
   })};
   await sendMessage(mailOptions);
+  
   return redirect("/portfolio");
 }
 

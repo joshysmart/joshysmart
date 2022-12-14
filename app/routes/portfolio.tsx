@@ -39,8 +39,6 @@ export const action = async ({request}:any) => {
     email: validateEmail(email),
   };
 
-  console.log("error");
-
   if (Object.values(fieldErrors).some(Boolean)) {
     return badRequest({ fieldErrors, fields });
   }
@@ -60,9 +58,6 @@ export const action = async ({request}:any) => {
     subject: 'I have a job for you',
     text: `${message} from ${email}`
   };
-
-  console.log("error", transporter);
-  console.log("error", mailOptions);
   
   const sendMessage = async(mailOptions:any)=> { 
     await transporter.sendMail(mailOptions, function(error: any, info: { response: string; }){

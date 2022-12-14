@@ -20,7 +20,7 @@ const InvoiceApp = () => {
       <PortfolioHero/>
       <ProjDesc tech={tech} bookmark={bookmark}/>
       <StaticPreview />
-      <NavProjects next={"url-shortner"} prev={"audiophile"}/>
+      <NavProjects next={"projects/url-shortner"} prev={"projects/audiophile"}/>
     </main>
   )
 }

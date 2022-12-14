@@ -18,7 +18,7 @@ const URLShortner =  () => {
       <PortfolioHero/>
       <ProjDesc tech={tech} bookmark={bookmark}/>
       <StaticPreview />
-      <NavProjects next={"audiophile"}  prev={"invoice-app"}/>
+      <NavProjects next={"projects/audiophile"}  prev={"projects/invoice-app"}/>
     </main>
   )
 }

@@ -16,7 +16,7 @@ const Audiophile = () => {
       <PortfolioHero/>
       <ProjDesc tech={tech} bookmark={bookmark}/>
       <StaticPreview />
-      <NavProjects next={"invoice-app"} prev={"url-shortner"}/>
+      <NavProjects next={"projects/invoice-app"} prev={"projects/url-shortner"}/>
     </main>
   )
 }

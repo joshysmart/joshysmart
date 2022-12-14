@@ -8,7 +8,7 @@ const AboutMe = () => {
         </p>
       </div>
       <div className="right-section px-4 md:px-8 xl:self-end">
-        <a href="/portfolio/audiophile" className="text-pureWhite border-b-2 border-lightGreen pb-3 text-base font-bold hover:text-lightGreen tracking-[.14em]">GO TO MY PORTFOLIO</a>
+        <a href="/portfolio/projects/audiophile" className="text-pureWhite border-b-2 border-lightGreen pb-3 text-base font-bold hover:text-lightGreen tracking-[.14em]">GO TO MY PORTFOLIO</a>
       </div>
     </section>
   )

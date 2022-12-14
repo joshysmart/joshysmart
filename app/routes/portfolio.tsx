@@ -46,8 +46,6 @@ export const action = async ({request}:any) => {
   }
 
   const transporter = NodeMailer.createTransport({
-    host: "smtp.gmail.com",
-    port: 465,
     service: 'gmail',
     secure: true,
     auth: {

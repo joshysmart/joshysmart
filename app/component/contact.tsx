@@ -1,7 +1,6 @@
 const Contact = (props:{actionData:any}) => {
   const error = props.actionData?.fieldErrors
   const user = props.actionData?.fields
-  console.log(user)
   return (
     <section className="flex flex-col py-16 pb-20 md:max-w-md md:m-auto lg:flex-row lg:m-0 lg:justify-between lg:min-w-full lg:px-8 xl:px-40 lg:space-x-36">
       <div className="left-section lg:w-1/2">

@@ -47,6 +47,7 @@ export const action = async ({request}:any) => {
 
   const transporter = NodeMailer.createTransport({
     service: 'gmail',
+    secure: true,
     auth: {
       user: 'fifthtribe05@gmail.com',
       pass: secretPass

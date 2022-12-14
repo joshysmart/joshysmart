@@ -1,5 +1,4 @@
-
-import NodeMailer from "nodemailer";
+import SGMail from "@sendgrid/mail"
 import { json, redirect } from "@remix-run/node";
 import Header from "~/component/header";
 import Footer from "~/component/footer";
@@ -24,7 +23,10 @@ function badRequest(data:any) {
   return json(data, { status: 400 });
 }
 
-const secretPass = process.env.REACT_APP_PASS
+const secretPass:any = process.env.SMTP_PASSWORD
+const username = process.env.SMTP_USERNAME
+const from = process.env.SMTP_FROM
+const to:any = process.env.SMTP_TO
 
 export const action = async ({request}:any) => {
   const formData = await request.formData();
@@ -39,41 +41,27 @@ export const action = async ({request}:any) => {
     email: validateEmail(email),
   };
 
-  console.log("error");
-
   if (Object.values(fieldErrors).some(Boolean)) {
     return badRequest({ fieldErrors, fields });
   }
 
-  const transporter = NodeMailer.createTransport({
-    service: 'gmail',
-    secure: true,
-    auth: {
-      user: 'fifthtribe05@gmail.com',
-      pass: secretPass
-    }
-  });
-  
-  const mailOptions = {
-    from: email,
-    to: 'fifthtribe05@gmail.com',
-    subject: 'I have a job for you',
-    text: `${message} from ${email}`
-  };
-  
-  const sendMessage = async(mailOptions:any)=> { 
-    await transporter.sendMail(mailOptions, function(error: any, info: { response: string; }){
-    console.log("sending");
-    console.log(error);
+  console.log(username,secretPass)
+  SGMail.setApiKey(secretPass)
 
-    if (error) {
-      console.log(error);
-    } else {
-      console.log('Email sent: ' + info.response);
-    }
-  })};
-  await sendMessage(mailOptions);
-  
+  const mailOptions:any = {
+    to: to,
+    from: from,
+    subject: "I have a job for you",
+    text: `${message} from ${email}`,
+    html: '<strong>I await your response</strong>',
+  }
+
+  SGMail.send(mailOptions).then(() => {
+    console.log("Email sent")
+  }).catch((error) => {
+    console.error(error)
+  })
+    
   return redirect("/portfolio");
 }
 

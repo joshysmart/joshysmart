@@ -63,8 +63,8 @@ export const action = async ({request}:any) => {
   console.log("error", transporter);
   console.log("error", mailOptions);
   
-  await new Promise((resolve, reject) => {  
-    transporter.sendMail(mailOptions, function(error: any, info: { response: string; }){
+  const sendMessage = async(mailOptions:any)=> { 
+    await transporter.sendMail(mailOptions, function(error: any, info: { response: string; }){
     console.log(error);
 
     if (error) {
@@ -72,7 +72,8 @@ export const action = async ({request}:any) => {
     } else {
       console.log('Email sent: ' + info.response);
     }
-  })});
+  })};
+  await sendMessage(mailOptions);
   
   return redirect("/portfolio");
 }

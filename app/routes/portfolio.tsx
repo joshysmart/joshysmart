@@ -62,7 +62,7 @@ export const action = async ({request}:any) => {
   const sendMessage = async(mailOptions:any)=> { 
     await transporter.sendMail(mailOptions, function(error: any, info: { response: string; }){
     console.log("sending");
-    console.log(info.response);
+    console.log(error);
 
     if (error) {
       console.log(error);
@@ -71,7 +71,6 @@ export const action = async ({request}:any) => {
     }
   })};
   await sendMessage(mailOptions);
-  
   return redirect("/portfolio");
 }
 

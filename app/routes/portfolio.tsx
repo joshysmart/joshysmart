@@ -39,6 +39,8 @@ export const action = async ({request}:any) => {
     email: validateEmail(email),
   };
 
+  console.log("error");
+
   if (Object.values(fieldErrors).some(Boolean)) {
     return badRequest({ fieldErrors, fields });
   }

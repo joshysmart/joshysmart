@@ -48,9 +48,9 @@ function Document({ children }:any) {
     <Links/>
   </head>
   <body>
-    <div className="wrapper">
+    <main className="wrapper">
       {children}
-    </div>
+    </main>
   </body>
   </html>
   )

@@ -69,10 +69,10 @@ export default function Index() {
   const actionData = useActionData();
 
   return (
-    <main >
+    <section >
       <Header />
         <Outlet/>
       <Footer actionData={actionData}/>
-    </main>
+    </section>
   );
 }

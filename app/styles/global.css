@@ -1148,6 +1148,10 @@ svg:hover path {
   .md\:text-mdh2 {
     font-size: 3rem;
   }
+
+  .md\:leading-\[72px\] {
+    line-height: 72px;
+  }
 }
 
 @media (min-width: 976px) {

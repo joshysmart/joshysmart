@@ -1,6 +1,6 @@
 const Header = () => {
   return (
-    <header className="container p-6 md:p-8 xl:px-40 xl:pr-44 flex flex-col items-center space-y-6 md:justify-between md:flex-row md:space-y-0 z-10 relative lg:min-w-full">
+    <header className="p-6 md:p-8 xl:px-40 xl:pr-44 flex flex-col items-center space-y-6 md:justify-between md:flex-row md:space-y-0 z-10 relative lg:min-w-full">
       <a href="/" className="text-pureWhite font-bold text-2xl hover:text-lightGreen">sanijoshua</a>
       <div className="social-icons flex space-x-6 items-center">
         <a href="https://github.com/joshysmart">

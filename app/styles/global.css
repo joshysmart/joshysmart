@@ -1235,6 +1235,10 @@ svg:hover path {
     padding-bottom: 0px;
   }
 
+  .lg\:pt-20 {
+    padding-top: 5rem;
+  }
+
   .lg\:text-left {
     text-align: left;
   }

@@ -8,6 +8,16 @@ module.exports = {
       lg: '976px',
       xl: '1440px',
     },
+    fontSize: {
+      base: '1rem',
+      mmdp: "1.125rem",
+      smh3: "1.5rem",
+      sm: "2.5rem",
+      md: '4.5rem',
+      lg: '5.5rem',
+      smh2: "2rem",
+      mdh2: "3rem"
+    },
     extend: {
       colors: {
         darkBlack: "#151515",

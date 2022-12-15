@@ -4,8 +4,8 @@ const Contact = (props:{actionData:any}) => {
   return (
     <section className="flex flex-col py-16 pb-20 md:max-w-md md:m-auto lg:flex-row lg:m-0 lg:justify-between lg:min-w-full lg:px-8 xl:px-40 lg:space-x-36">
       <div className="left-section lg:w-1/2">
-        <h3 className="text-pureWhite px-4 text-4xl font-bold mb-8 text-center md:text-7xl lg:text-left">Contact</h3>
-        <p className="text-lightGray px-4 text-base font-medium text-center mb-12 md:text-lg lg:text-left">I would love to hear about your project and how I could help. Please fill in the form, and I’ll get back to you as soon as possible.</p>
+        <h2 className="text-pureWhite px-4 text-sm font-bold mb-8 text-center md:text-md lg:text-lg lg:text-left lg:leading-[88px]">Contact</h2>
+        <p className="text-lightGray px-4 text-base font-medium text-center mb-12 md:text-mdp lg:text-left">I would love to hear about your project and how I could help. Please fill in the form, and I’ll get back to you as soon as possible.</p>
       </div>
       <div className="right-section lg:w-1/2 relative">
         <form action="/portfolio" method="post"  className="flex flex-col px-4 text-pureWhite ">

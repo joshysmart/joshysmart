@@ -4,8 +4,8 @@ import useData from "~/hooks/useData"
 const TechStack = () => {
   const {techStack} = useData()
   const tech = techStack?.map((tech,i) => <div key={i} className=" mb-6 md:px-8 xl:px-0 md:mb-14">
-    <div className="tech"><h2 className="text-pureWhite font-medium text-4xl md:text-5xl text-center md:text-left md:mb-4">{tech.tech}</h2></div>
-      <p className="experience text-lightGray text-base text-center font-medium md:text-left md:text-lg">{tech.exp}</p>
+    <div className="tech"><h2 className="text-pureWhite font-medium text-smh2 md:text-mdh2 text-center md:text-left">{tech.tech}</h2></div>
+      <p className="experience text-lightGray text-base text-center font-medium md:text-left md:text-mmdp">{tech.exp}</p>
     </div>)
 
   return (

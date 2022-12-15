@@ -5,11 +5,11 @@ import TechStack from "~/component/tech-stack";
 
 export default function Index() {
   return (
-    <main >
+    <section >
         <Hero/>
         <Line/>
         <TechStack/>
         <AboutMe/>
-    </main>
+    </section>
   );
 }

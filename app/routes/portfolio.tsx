@@ -71,7 +71,9 @@ export default function Index() {
   return (
     <section >
       <Header />
-        <Outlet/>
+        <main>
+          <Outlet/>
+        </main>
       <Footer actionData={actionData}/>
     </section>
   );

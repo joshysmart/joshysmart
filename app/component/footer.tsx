@@ -7,9 +7,9 @@ const Footer = (props:{actionData:any}) => {
     <footer className="footer flex flex-col bg-darkGray pb-14 md:pb-4">
       <Contact actionData={props.actionData}/>
       <Line/>
-      <div className="pt-10 md:p-0">
+      <section className="pt-10 md:p-0">
         <Header/>
-      </div>
+      </section>
     </footer>
   )
 }

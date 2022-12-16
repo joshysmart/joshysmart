@@ -65,7 +65,7 @@ export const action = async ({request}:any) => {
   return redirect("/portfolio");
 }
 
-export default function Index() {
+export default function Portfolio() {
   const actionData = useActionData();
 
   return (

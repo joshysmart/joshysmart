@@ -33,9 +33,6 @@ export default function App() {
   return (
     <Document title="Sani Joshua">
       <Outlet />
-      <ScrollRestoration />
-      <Scripts />
-      <LiveReload />
     </Document>
   );
 }
@@ -51,6 +48,9 @@ function Document({ children }:any) {
     <section className="wrapper">
       {children}
     </section>
+    <LiveReload />
+    <ScrollRestoration />
+    <Scripts />
   </body>
   </html>
   )

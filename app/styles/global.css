@@ -513,6 +513,10 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
+.invisible {
+  visibility: hidden;
+}
+
 .absolute {
   position: absolute;
 }
@@ -584,6 +588,10 @@ video {
 
 .grid {
   display: grid;
+}
+
+.hidden {
+  display: none;
 }
 
 .h-6 {
@@ -790,10 +798,6 @@ video {
 
 .leading-\[40px\] {
   line-height: 40px;
-}
-
-.leading-\[32px\] {
-  line-height: 32px;
 }
 
 .tracking-\[\.14em\] {
@@ -1133,10 +1137,6 @@ svg:hover path {
     font-size: 4.5rem;
   }
 
-  .md\:text-lg {
-    font-size: 5.5rem;
-  }
-
   .md\:text-smh2 {
     font-size: 2rem;
   }
@@ -1223,6 +1223,15 @@ svg:hover path {
     padding-bottom: 5rem;
   }
 
+  .lg\:py-40 {
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+  }
+
+  .lg\:pt-20 {
+    padding-top: 5rem;
+  }
+
   .lg\:pr-0 {
     padding-right: 0px;
   }
@@ -1235,8 +1244,12 @@ svg:hover path {
     padding-bottom: 0px;
   }
 
-  .lg\:pt-20 {
-    padding-top: 5rem;
+  .lg\:pb-40 {
+    padding-bottom: 10rem;
+  }
+
+  .lg\:pb-44 {
+    padding-bottom: 11rem;
   }
 
   .lg\:text-left {
@@ -1249,10 +1262,6 @@ svg:hover path {
 
   .lg\:leading-\[88px\] {
     line-height: 88px;
-  }
-
-  .lg\:leading-3 {
-    line-height: .75rem;
   }
 }
 

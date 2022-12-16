@@ -62,7 +62,7 @@ export const action = async ({request}:any) => {
     console.error(error)
   })
     
-  return redirect("/portfolio");
+  return null;
 }
 
 export default function Portfolio() {

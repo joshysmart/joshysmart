@@ -1,6 +1,6 @@
 import SGMail from "@sendgrid/mail"
 import { json, redirect } from "@remix-run/node";
-import Header from "~/component/header";
+import Nav from "~/component/nav";
 import Footer from "~/component/footer";
 import { Outlet, useActionData } from "@remix-run/react";
 
@@ -69,12 +69,12 @@ export default function Portfolio() {
   const actionData = useActionData();
 
   return (
-    <section >
-      <Header />
+    <div >
+      <Nav />
         <main>
           <Outlet/>
         </main>
       <Footer actionData={actionData}/>
-    </section>
+    </div>
   );
 }

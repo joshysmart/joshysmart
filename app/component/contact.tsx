@@ -2,12 +2,12 @@ const Contact = (props:{actionData:any}) => {
   const error = props.actionData?.fieldErrors
   const user = props.actionData?.fields
   return (
-    <section id="contact" className="flex flex-col py-16 pb-20 md:max-w-md md:m-auto lg:flex-row lg:m-0 lg:justify-between lg:min-w-full lg:px-8 xl:px-40 lg:space-x-36">
+    <div id="contact" className="flex flex-col py-16 pb-20 md:max-w-md md:m-auto lg:flex-row lg:m-0 lg:justify-between lg:min-w-full lg:px-8 xl:px-40 lg:space-x-36">
       <section className="left-section lg:w-1/2">
         <h2 className="text-pureWhite px-4 text-sm font-bold mb-8 text-center md:text-md lg:text-lg lg:text-left lg:leading-[88px]">Contact</h2>
         <p className="text-lightGray px-4 text-base font-medium text-center mb-12 md:text-mdp lg:text-left">I would love to hear about your project and how I could help. Please fill in the form, and I’ll get back to you as soon as possible.</p>
       </section>
-      <section className="right-section lg:w-1/2 relative">
+      <div className="right-section lg:w-1/2 relative">
         <a id="form" className="invisible" href="form">scroll here</a>
         <form action="/portfolio#form" method="post"  className="flex flex-col px-4 text-pureWhite ">
           <label htmlFor="name" className="relative">
@@ -23,8 +23,8 @@ const Contact = (props:{actionData:any}) => {
           <textarea name="message" id="" placeholder="MESSAGE" className="p-4 text-base font-medium pt-8 outline-none border-b block mb-8 bg-transparent focus:border-lightGreen resize-none" rows={4} defaultValue={user?.message} required></textarea>
           <button className="self-end border-lightGreen border-b-2 pb-3 hover:text-lightGreen tracking-[.14em]" type="submit">SEND MESSAGE</button>
         </form>
-      </section>
-    </section>
+      </div>
+    </div>
   )
 }
 

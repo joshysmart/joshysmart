@@ -8,7 +8,7 @@ import {
   ScrollRestoration,
 } from "@remix-run/react";
 
-import Header from "./component/header";
+import Nav from "./component/nav";
 import Footer from "./component/footer";
 
 import globalStylesUrl from "~/styles/global.css";
@@ -45,9 +45,9 @@ function Document({ children }:any) {
     <Links/>
   </head>
   <body>
-    <section className="wrapper">
+    <div className="wrapper">
       {children}
-    </section>
+    </div>
     <LiveReload />
     <ScrollRestoration />
     <Scripts />
@@ -60,7 +60,7 @@ export function ErrorBoundary({ error }:any) {
   console.log(error);
   return (
     <Document>
-      <Header />
+      <Nav />
         <h1 className="text-pureWhite font-bold text-7xl p-6">Error</h1>
         <p className="text-pureWhite text-base mb-10 p-6">{error.message}</p>
       <Footer actionData={undefined} />

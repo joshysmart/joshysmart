@@ -26,7 +26,7 @@ html {
     url("../../public/assets/images/pattern-circle.svg"),
     url("../../public/assets/images/pattern-rings.svg");
   background-repeat: no-repeat;
-  background-position: -342px 155px, 310px 280px, 215px 1244px;
+  background-position: -342px 155px, 310px 300px, 215px 1390px;
 }
 
 @media only screen and (min-width:768px) {
@@ -41,6 +41,19 @@ html {
   }
 }
 
+.overlay::before {
+  width: 100%;
+  position: absolute;
+  content: '';
+  bottom: 0;
+  top: 0;
+  background: #151515aa;
+  z-index: 20;
+}
+
+.open {
+  display: none;
+}
 
 .hero .right-section {
   width: 174px;
@@ -174,7 +187,7 @@ html {
 .footer {
   background-image: url("../../public/assets/images/pattern-rings.svg");
   background-repeat: no-repeat;
-  background-position: -342px 468px;
+  background-position: -342px 498px;
 }
 
 @media only screen and (min-width:768px) {

@@ -1,6 +1,6 @@
 const AboutMe = () => {
   return (
-    <div className="flex flex-col py-36  space-y-6 md:space-y-8 md:pt-0 xl:px-40 xl:flex-row xl:justify-between lg:pb-44" id="about">
+    <div className="flex flex-col py-32  space-y-6 md:space-y-8 md:pt-0 xl:px-40 xl:flex-row xl:justify-between lg:pb-44" id="about">
       <section className="left-section xl:-mb-4">
         <h3 className="text-pureWhite font-bold text-sm md:text-md lg:text-lg  px-4 md:px-8 mb-8 lg:p-0">About Me</h3>
         <p className="text-lightGray  px-4 md:px-8 text-base font-medium md:text-mdp xl:max-w-2xl lg:p-0">

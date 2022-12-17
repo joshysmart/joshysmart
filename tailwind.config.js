@@ -24,7 +24,8 @@ module.exports = {
         lightGreen: "#4EE1A0",
         darkGray: "#242424",
         lightGray: "#d9d9d9",
-        pureWhite: "#FFFFFF"
+        pureWhite: "#FFFFFF",
+        overlay: "#151515aa"
       }
     },
   },

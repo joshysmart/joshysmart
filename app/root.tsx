@@ -5,8 +5,9 @@ import {
   Meta,
   Outlet,
   Scripts,
-  ScrollRestoration,
+  ScrollRestoration
 } from "@remix-run/react";
+
 
 import Nav from "./component/nav";
 import Footer from "./component/footer";
@@ -31,39 +32,35 @@ export const meta: MetaFunction = () => ({
 
 export default function App() {
   return (
-    <Document title="Sani Joshua">
-      <Outlet />
-    </Document>
-  );
-}
-
-function Document({ children }:any) {
-  return (
-  <html lang="en">
-  <head>
-    <Meta />
-    <Links/>
-  </head>
-  <body>
-    <div className="wrapper">
-      {children}
-    </div>
-    <LiveReload />
-    <ScrollRestoration />
-    <Scripts />
-  </body>
-  </html>
+    <html lang="en">
+			<head>
+				<Meta />
+				<Links />
+			</head>
+			<body>
+				<Outlet />
+				<ScrollRestoration />
+				<Scripts />
+				{process.env.NODE_ENV === "development" && <LiveReload />}
+			</body>
+		</html>
   )
 }
 
 export function ErrorBoundary({ error }:any) {
   console.log(error);
   return (
-    <Document>
-      <Nav />
-        <h1 className="text-pureWhite font-bold text-7xl p-6">Error</h1>
-        <p className="text-pureWhite text-base mb-10 p-6">{error.message}</p>
-      <Footer actionData={undefined} />
-    </Document>
+    <html lang="en">
+      <head>
+        <Meta />
+        <Links/>
+      </head>
+      <body>
+        <Nav/>
+          <h1 className="text-pureWhite font-bold text-7xl p-6">Error</h1>
+          <p className="text-pureWhite text-base mb-10 p-6">{error.message}</p>
+        <Footer actionData={undefined} wrapperEl={undefined}/>
+      </body>
+    </html>
   );
 }

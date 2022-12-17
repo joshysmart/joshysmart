@@ -513,16 +513,20 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
-.invisible {
-  visibility: hidden;
-}
-
 .absolute {
   position: absolute;
 }
 
 .relative {
   position: relative;
+}
+
+.top-0 {
+  top: 0px;
+}
+
+.left-0 {
+  left: 0px;
 }
 
 .right-4 {
@@ -533,8 +537,16 @@ video {
   bottom: 1rem;
 }
 
+.z-30 {
+  z-index: 30;
+}
+
 .z-10 {
   z-index: 10;
+}
+
+.m-0 {
+  margin: 0px;
 }
 
 .my-6 {
@@ -578,6 +590,10 @@ video {
   margin-bottom: 1.5rem;
 }
 
+.mt-10 {
+  margin-top: 2.5rem;
+}
+
 .block {
   display: block;
 }
@@ -588,10 +604,6 @@ video {
 
 .grid {
   display: grid;
-}
-
-.hidden {
-  display: none;
 }
 
 .h-6 {
@@ -660,8 +672,16 @@ video {
   align-self: flex-end;
 }
 
+.rounded-lg {
+  border-radius: 0.5rem;
+}
+
 .rounded-full {
   border-radius: 9999px;
+}
+
+.border-0 {
+  border-width: 0px;
 }
 
 .border {
@@ -686,13 +706,18 @@ video {
   border-color: rgb(239 68 68 / var(--tw-border-opacity));
 }
 
-.bg-transparent {
-  background-color: transparent;
-}
-
 .bg-darkGray {
   --tw-bg-opacity: 1;
   background-color: rgb(36 36 36 / var(--tw-bg-opacity));
+}
+
+.bg-lightGreen {
+  --tw-bg-opacity: 1;
+  background-color: rgb(78 225 160 / var(--tw-bg-opacity));
+}
+
+.bg-transparent {
+  background-color: transparent;
 }
 
 .bg-pureWhite {
@@ -708,9 +733,13 @@ video {
   padding: 1rem;
 }
 
-.py-36 {
-  padding-top: 9rem;
-  padding-bottom: 9rem;
+.p-2 {
+  padding: 0.5rem;
+}
+
+.py-32 {
+  padding-top: 8rem;
+  padding-bottom: 8rem;
 }
 
 .px-4 {
@@ -804,10 +833,6 @@ video {
   letter-spacing: .14em;
 }
 
-.tracking-\[-2\.5px\] {
-  letter-spacing: -2.5px;
-}
-
 .text-pureWhite {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
@@ -831,6 +856,10 @@ video {
 .outline-none {
   outline: 2px solid transparent;
   outline-offset: 2px;
+}
+
+.outline-0 {
+  outline-width: 0px;
 }
 
 @font-face {
@@ -860,7 +889,7 @@ html {
     url("../../public/assets/images/pattern-circle.svg"),
     url("../../public/assets/images/pattern-rings.svg");
   background-repeat: no-repeat;
-  background-position: -342px 155px, 310px 280px, 215px 1244px;
+  background-position: -342px 155px, 310px 300px, 215px 1390px;
 }
 
 @media only screen and (min-width:768px) {
@@ -873,6 +902,20 @@ html {
   .wrapper {
     background-position: -342px 120px, 1210px 680px, 1190px 1044px;
   }
+}
+
+.overlay::before {
+  width: 100%;
+  position: absolute;
+  content: '';
+  bottom: 0;
+  top: 0;
+  background: #151515aa;
+  z-index: 20;
+}
+
+.open {
+  display: none;
 }
 
 .hero .right-section {
@@ -997,7 +1040,7 @@ html {
 .footer {
   background-image: url("../../public/assets/images/pattern-rings.svg");
   background-repeat: no-repeat;
-  background-position: -342px 468px;
+  background-position: -342px 498px;
 }
 
 @media only screen and (min-width:768px) {
@@ -1083,12 +1126,12 @@ svg:hover path {
     border-bottom-width: 8px;
   }
 
-  .md\:p-0 {
-    padding: 0px;
-  }
-
   .md\:p-8 {
     padding: 2rem;
+  }
+
+  .md\:p-0 {
+    padding: 0px;
   }
 
   .md\:px-8 {
@@ -1137,12 +1180,12 @@ svg:hover path {
     font-size: 4.5rem;
   }
 
-  .md\:text-smh2 {
-    font-size: 2rem;
-  }
-
   .md\:text-mmdp {
     font-size: 1.125rem;
+  }
+
+  .md\:text-smh2 {
+    font-size: 2rem;
   }
 
   .md\:text-mdh2 {
@@ -1151,6 +1194,10 @@ svg:hover path {
 
   .md\:leading-\[72px\] {
     line-height: 72px;
+  }
+
+  .md\:tracking-\[-2\.5px\] {
+    letter-spacing: -2.5px;
   }
 }
 
@@ -1203,12 +1250,6 @@ svg:hover path {
     justify-content: space-between;
   }
 
-  .lg\:space-x-36 > :not([hidden]) ~ :not([hidden]) {
-    --tw-space-x-reverse: 0;
-    margin-right: calc(9rem * var(--tw-space-x-reverse));
-    margin-left: calc(9rem * calc(1 - var(--tw-space-x-reverse)));
-  }
-
   .lg\:p-0 {
     padding: 0px;
   }
@@ -1223,9 +1264,8 @@ svg:hover path {
     padding-bottom: 5rem;
   }
 
-  .lg\:py-40 {
-    padding-top: 10rem;
-    padding-bottom: 10rem;
+  .lg\:pb-44 {
+    padding-bottom: 11rem;
   }
 
   .lg\:pt-20 {
@@ -1242,14 +1282,6 @@ svg:hover path {
 
   .lg\:pb-0 {
     padding-bottom: 0px;
-  }
-
-  .lg\:pb-40 {
-    padding-bottom: 10rem;
-  }
-
-  .lg\:pb-44 {
-    padding-bottom: 11rem;
   }
 
   .lg\:text-left {
@@ -1300,16 +1332,16 @@ svg:hover path {
     padding-right: 0px;
   }
 
-  .xl\:pr-44 {
-    padding-right: 11rem;
-  }
-
   .xl\:pr-40 {
     padding-right: 10rem;
   }
 
   .xl\:pl-40 {
     padding-left: 10rem;
+  }
+
+  .xl\:pr-44 {
+    padding-right: 11rem;
   }
 
   .xl\:pt-40 {

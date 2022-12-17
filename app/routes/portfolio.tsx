@@ -1,8 +1,11 @@
 import SGMail from "@sendgrid/mail"
-import { json, redirect } from "@remix-run/node";
+import type { ActionArgs} from "@remix-run/node";
+import { json } from "@remix-run/node";
 import Nav from "~/component/nav";
 import Footer from "~/component/footer";
 import { Outlet, useActionData } from "@remix-run/react";
+import Overlay from "~/component/overlay";
+import { useRef } from "react";
 
 const validateName = (name:string) => {
   if (name.length < 3) {
@@ -23,15 +26,14 @@ function badRequest(data:any) {
   return json(data, { status: 400 });
 }
 
-const secretPass:any = process.env.SMTP_PASSWORD
-const username = process.env.SMTP_USERNAME
-const from = process.env.SMTP_FROM
-const to:any = process.env.SMTP_TO
+export async function action({ request }: ActionArgs) {  
+  const secretPass:any = process?.env.SMTP_PASSWORD
+  const from = process?.env.SMTP_FROM
+  const to:any = process?.env.SMTP_TO
 
-export const action = async ({request}:any) => {
   const formData = await request.formData();
-  const name = formData.get("name")
-  const email = formData.get("email")
+  const name:any = formData?.get("name")
+  const email:any = formData?.get("email")
   const message = formData.get("message");
 
   const fields = { name, email, message };
@@ -45,7 +47,6 @@ export const action = async ({request}:any) => {
     return badRequest({ fieldErrors, fields });
   }
 
-  console.log(username,secretPass)
   SGMail.setApiKey(secretPass)
 
   const mailOptions:any = {
@@ -61,20 +62,22 @@ export const action = async ({request}:any) => {
   }).catch((error) => {
     console.error(error)
   })
-    
-  return null;
+      
+  return {success: true, fields};
 }
 
 export default function Portfolio() {
   const actionData = useActionData();
+  const wrapperEl = useRef(null)
 
   return (
-    <div >
+    <div className={`wrapper relative ${actionData?.success && "overlay"}`} ref={wrapperEl}>
       <Nav />
         <main>
           <Outlet/>
         </main>
-      <Footer actionData={actionData}/>
+      <Footer actionData={actionData} wrapperEl={wrapperEl}/>
+      <Overlay />
     </div>
   );
 }

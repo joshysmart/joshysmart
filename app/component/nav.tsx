@@ -1,6 +1,6 @@
 const Header = () => {
   return (
-    <nav className="p-6 md:p-8 xl:px-40 xl:pr-44 flex flex-col items-center space-y-6 md:justify-between md:flex-row md:space-y-0 z-10 relative lg:min-w-full">
+    <nav className="p-6 md:p-8 lg:pr-16 xl:px-40 xl:pr-44 flex flex-col items-center space-y-6 md:justify-between md:flex-row md:space-y-0 z-10 relative lg:min-w-full">
       <a href="/" className="text-pureWhite font-bold text-smh3 md:text-smh2 hover:text-lightGreen" aria-label="logo">sanijoshua</a>
       <div className="social-icons flex space-x-6 items-center">
         <a href="https://github.com/joshysmart" aria-label="my github">

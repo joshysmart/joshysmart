@@ -1322,6 +1322,10 @@ svg:hover path {
     align-self: flex-end;
   }
 
+  .xl\:p-0 {
+    padding: 0px;
+  }
+
   .xl\:px-40 {
     padding-left: 10rem;
     padding-right: 10rem;

@@ -59,7 +59,7 @@ export function ErrorBoundary({ error }:any) {
         <Nav/>
           <h1 className="text-pureWhite font-bold text-7xl p-6">Error</h1>
           <p className="text-pureWhite text-base mb-10 p-6">{error.message}</p>
-        <Footer actionData={undefined} wrapperEl={undefined}/>
+        <Footer actionData={undefined}/>
       </body>
     </html>
   );

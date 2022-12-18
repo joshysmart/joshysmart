@@ -1,16 +1,10 @@
-import { redirect } from "@remix-run/node"
-import { useRef } from "react"
 
-
-export default function Confirmation(props:{success:any, user:any, wrapperEl:any}) {
-  const wrapperEl = props.wrapperEl
-  const confirmEl:any = useRef(null)
+export default function Confirmation(props:{success:any, user:any}) {
   const success = props.success
   const user = props.user
-  console.log(user)
 
   return (
-    <div className={`${!success && "open"} absolute top-0 p-4 md:p-8 left-0 z-30`} ref={confirmEl}>
+    <div className={`${!success && "open"} absolute top-0 p-4 md:p-8 left-0 z-30`}>
       <div className=" bg-darkGray  text-pureWhite p-4 md:p-8 w-full m-0 rounded-lg  ">
         <section className="flex flex-col items-center">
           <div className="tick"></div>

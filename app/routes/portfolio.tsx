@@ -76,7 +76,7 @@ export default function Portfolio() {
         <main>
           <Outlet/>
         </main>
-      <Footer actionData={actionData} wrapperEl={wrapperEl}/>
+      <Footer actionData={actionData}/>
       <Overlay />
     </div>
   );

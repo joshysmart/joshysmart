@@ -1,7 +1,7 @@
 import { Form } from "@remix-run/react"
 import Confirmation from "./confirmation"
 
-const Contact = (props:{actionData:any, wrapperEl:any}) => {
+const Contact = (props:{actionData:any}) => {
   const error = props.actionData?.fieldErrors
   const user = props.actionData?.fields
   const success = props.actionData?.success
@@ -26,7 +26,7 @@ const Contact = (props:{actionData:any, wrapperEl:any}) => {
           <span className="text-right block mt-1 text-red-500" aria-live="polite">{error?.email && error?.email}</span>
           <textarea name="message" id="message" placeholder="MESSAGE" className="p-4 text-base font-medium pt-8 outline-none border-b block mb-8 bg-transparent focus:border-lightGreen resize-none" rows={4} defaultValue={user?.message} required></textarea>
           <button className="self-end border-lightGreen border-b-2 pb-3 hover:text-lightGreen tracking-[.14em]" type="submit">SEND MESSAGE</button>
-          <Confirmation success={success} user={user?.name} wrapperEl={props?.wrapperEl}/>
+          <Confirmation success={success} user={user?.name}/>
         </Form>
       </div>
     </div>

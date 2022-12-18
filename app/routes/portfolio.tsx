@@ -54,7 +54,7 @@ export async function action({ request }: ActionArgs) {
     from: from,
     subject: "I have a job for you",
     text: `${message} from ${email}`,
-    html: '<strong>I await your response</strong>',
+    html: `<strong>Message from ${name} ${email} \n ${message}/strong>`
   }
 
   SGMail.send(mailOptions).then(() => {

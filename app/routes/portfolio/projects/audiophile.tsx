@@ -14,7 +14,7 @@ const Audiophile = () => {
   return (
     <main className="project audiophile">
       <PortfolioHero/>
-      <ProjDesc tech={tech} bookmark={bookmark} website={"audiophile-ecommerce-website-self.vercel.app"}/>
+      <ProjDesc tech={tech} bookmark={bookmark} website={"https://audiophile-ecommerce-website-self.vercel.app/"}/>
       <StaticPreview />
       <NavProjects next={"projects/invoice-app"} prev={"projects/url-shortner"}/>
     </main>

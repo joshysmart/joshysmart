@@ -16,7 +16,7 @@ const URLShortner =  () => {
   return (
     <main className="project url-shortner">
       <PortfolioHero/>
-      <ProjDesc tech={tech} bookmark={bookmark} website={"https://invoice-app-ten-delta.vercel.app/invoices"}/>
+      <ProjDesc tech={tech} bookmark={bookmark} website={"https://url-shortening-api-tau.vercel.app/"}/>
       <StaticPreview />
       <NavProjects next={"projects/audiophile"}  prev={"projects/invoice-app"}/>
     </main>

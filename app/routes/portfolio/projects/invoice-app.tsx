@@ -18,7 +18,7 @@ const InvoiceApp = () => {
   return (
     <main className="project invoice-app">
       <PortfolioHero/>
-      <ProjDesc tech={tech} bookmark={bookmark}/>
+      <ProjDesc tech={tech} bookmark={bookmark} website={"https://url-shortening-api-tau.vercel.app/"}/>
       <StaticPreview />
       <NavProjects next={"projects/url-shortner"} prev={"projects/audiophile"}/>
     </main>

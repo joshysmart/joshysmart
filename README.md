@@ -1,5 +1,5 @@
 <div id="header" align="center">
-  <img src="https://media.giphy.com/media/UUBYepX4WSiNFf8GOT/giphy.gif" width="100"/>
+  <img src="https://media.giphy.com/media/Xh2BUWUTTZ4akrYTZB/giphy.gif" width="100"/>
 </div>
 
 <div id="badges" align="center">
@@ -9,6 +9,7 @@
   <a href="https://twitter.com/saniojoshua">
     <img src="https://img.shields.io/badge/Twitter-blue?style=for-the-badge&logo=twitter&logoColor=white" alt="Twitter Badge"/>
   </a>
+  <br />
   <img src="https://komarev.com/ghpvc/?username=joshysmart&style=flat-square&color=blue" alt=""/>
 </div>
 

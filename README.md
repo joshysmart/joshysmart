@@ -29,13 +29,12 @@
 
 - :zap: In my free time, I read tech articles.
 
-- :mailbox:How to reach me: [![Linkedin Badge](https://img.shields.io/badge/-Joshysmart-blue?style=flat&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/joshysmart/)
+- :mailbox:How to reach me: [![Linkedin Badge](https://img.shields.io/badge/-Joshysmart-blue?style=flat&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/joshysmart/) 📫 [telegram](https://t.me/joshysmart)
 
 - 🔭 I’m currently working on improving my skills
 - 🌱 I’m currently learning python.
 - 👯 I’m looking to collaborate on interesting projects
 - 💬 Ask me about anything
-- 📫 How to reach me: [telegram](https://t.me/joshysmart)
 - ⚡ Fun fact: Worldwide Web was programmed with Objective C."
 - Here is a live version of my [portfolio](https://joshysmart.vercel.app/)
 

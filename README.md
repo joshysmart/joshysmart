@@ -29,7 +29,7 @@
 
 - :zap: In my free time, I read tech articles.
 
-- :mailbox:How to reach me: [![Linkedin Badge](https://img.shields.io/badge/-Joshysmart-blue?style=flat&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/joshysmart/) 📫 [telegram](https://t.me/joshysmart)
+- :mailbox:How to reach me: [![Linkedin Badge](https://img.shields.io/badge/-Joshysmart-blue?style=flat&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/joshysmart/)
 
 - 🔭 I’m currently working on improving my skills
 - 🌱 I’m currently learning python.

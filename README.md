@@ -1,5 +1,5 @@
 <div id="header" align="center">
-  <img src="https://giphy.com/gifs/MeeshoTech-code-pull-github-VePtB3roynxfLYicuV" width="100"/>
+  <img src="https://media.giphy.com/media/Xh2BUWUTTZ4akrYTZB/giphy.gif" width="100"/>
 </div>
 
 <div id="badges" align="center">

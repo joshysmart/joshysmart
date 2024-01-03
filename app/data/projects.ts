@@ -6,6 +6,9 @@ import urlShortnerBottom from "../../public/assets/images/url-shortner-two.webp"
 import audiophileHero from "../../public/assets/images/audiophile-hero.webp";
 import audiophileTop from "../../public/assets/images/audiophile-one.webp";
 import audiophileBottom from "../../public/assets/images/audiophile-two.webp";
+import kanbanHero from "../../public/assets/images/kanban-hero.webp";
+import kanbanTop from "../../public/assets/images/kanban-one.webp";
+import kanbanBottom from "../../public/assets/images/kanban-two.webp";
 
 const projects: {
   [key: string]: {
@@ -53,11 +56,24 @@ const projects: {
       "This project required me to build a fully responsive url shortner based on the designs provided. I used the shrtcode API to create shortened URLs and displayed them on the page where it can be copied to the cliboard. It was built using React, HTML5, along with CSS Grid, Sass, and Javascript for the areas that required interactivity, such as the input section",
     live: "https://url-shortening-api-tau.vercel.app/",
     prev: "projects/invoice-app",
-    next: "projects/audiophile",
+    next: "projects/kanban",
     images: {
       hero: urlShortnerHero,
       "top-section": urlShortnerHero,
       "bottom-section": urlShortnerBottom,
+    },
+  },
+  kanban: {
+    tech: ["Next.js", "Express", "MongoDb", "Typescript", "TailwindCSS"],
+    bookmark:
+      "This project required me to build a fully responsive kanban board. I used Next.js, Express, MongoDB, Typescript, and TailwindCSS. The challenge was to build the kanban board and get it looking as close to the design as possible. I also implemented authentication for users to manage their kanban board individually. It also has drag and drop using reactDnD to move tasks accross the  board",
+    live: "https://kaban-task-manager.vercel.app/",
+    prev: "projects/url-shortner",
+    next: "projects/audiophile",
+    images: {
+      hero: kanbanHero,
+      "top-section": kanbanTop,
+      "bottom-section": kanbanBottom,
     },
   },
 };

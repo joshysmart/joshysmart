@@ -5,7 +5,7 @@ const workExperience = [
     date: "March 2023 - Date.now()",
     responsibilities: [
       "Designing and developing software and/or web applications according to project specifications.",
-      "Designing and implement database structure, handling data storage, retrieval, and management, and ensuring data integrity and security.",
+      "Designing and implementing database structure, handling data storage, retrieval, management, and ensuring data integrity and security.",
       "Server-side programming, responsible for the logic, data manipulation, and integration of the application. This includes working with server-side languages such as Node.js.",
       "Debugging, troubleshooting, writing, and executing tests to ensure the functionality, performance, and reliability of the application.",
       "Building and integrating APIs, and third party applications like payment gateways into web applications and websites to facilitate online transactions.",
@@ -13,7 +13,7 @@ const workExperience = [
     ],
   },
   {
-    company: "Offer Letter",
+    company: "Eduglobe Consultants",
     position: "Full-stack Developer/Team Lead",
     date: "December 2022 - June 2023",
     responsibilities: [

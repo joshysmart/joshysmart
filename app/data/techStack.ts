@@ -18,7 +18,7 @@ const techStack = [
     exp: `${calculateExp(2022)} Years Experience`,
   },
   {
-    tech: "Web Design",
+    tech: "UI Design",
     exp: `${calculateExp(2017)} Years Experience`,
   },
   {
@@ -27,6 +27,18 @@ const techStack = [
   },
   {
     tech: "Tailwind CSS",
+    exp: `${calculateExp(2021)} Years Experience`,
+  },
+  {
+    tech: "Node",
+    exp: `${calculateExp(2021)} Years Experience`,
+  },
+  {
+    tech: "Express",
+    exp: `${calculateExp(2021)} Years Experience`,
+  },
+  {
+    tech: "MongoDB",
     exp: `${calculateExp(2021)} Years Experience`,
   },
 ];

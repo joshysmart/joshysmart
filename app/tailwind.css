@@ -64,7 +64,7 @@ html {
 .hero .right-section .image {
   width: 100%;
   height: 100%;
-  background-image: url('../public/assets/images/profile-image-mobile.png');
+  background-image: url('../public/assets/images/profile-image-mobile.webp');
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -84,7 +84,7 @@ html {
   .hero .right-section .image {
     height: 450px;
     position: absolute;
-    background-image: url('../public/assets/images/profile-image-tablet.png');
+    background-image: url('../public/assets/images/profile-image-tablet.webp');
   }
 }
 
@@ -98,7 +98,7 @@ html {
   .hero .right-section .image {
     height: 618px;
     position: absolute;
-    background-image: url('../public/assets/images/profile-image-desktop.png');
+    background-image: url('../public/assets/images/profile-image-desktop.webp');
     background-size: cover;
   }
 }
@@ -109,7 +109,7 @@ html {
   }
 
   .hero .right-section .image {
-    background-image: url('../public/assets/images/profile-image-desktop.png');
+    background-image: url('../public/assets/images/profile-image-desktop.webp');
   }
 }
 
@@ -148,7 +148,7 @@ html {
 .work-experience {
   background-image: url('../public/assets/images/pattern-rings.svg');
   background-repeat: no-repeat;
-  background-position: -320px 598px;
+  background-position: -320px 748px;
 }
 
 .footer {

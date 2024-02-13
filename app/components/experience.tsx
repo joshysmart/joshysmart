@@ -3,11 +3,11 @@ import WorkExperience from "./work-experience";
 
 const Experience = () => {
   return (
-    <div className="pb-32 px-4 md:px-8 xl:px-40">
+    <div className="work-experience pb-32 px-4 md:px-8 xl:px-40">
       <h3 className="text-pureWhite font-bold text-sm md:text-md lg:text-lg mb-8 xl:p-0">
         Work Experience
       </h3>
-      <div className="work-experience flex flex-col lg:gap-40 gap-20">
+      <div className="flex flex-col lg:gap-40 gap-20">
         {workExperience.map((work) => (
           <WorkExperience
             key={work.company}

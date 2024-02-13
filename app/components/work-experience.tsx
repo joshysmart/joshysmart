@@ -21,10 +21,10 @@ const WorkExperience = ({
       </div>
       <ul className="flex flex-col gap-2 text-lightGray font-medium md:text-mmdp mt-5 lg:mt-8">
         {responsibilities.map((responsibility) => (
-          <ul className="flex items-center gap-2" key={responsibility}>
+          <li className="flex items-center gap-2" key={responsibility}>
             <div className="w-4 h-4 rounded bg-lightGreen" />
-            <li className="w-[90%]">{responsibility}</li>
-          </ul>
+            <span className="w-[90%]">{responsibility}</span>
+          </li>
         ))}
       </ul>
     </div>

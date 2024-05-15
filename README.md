@@ -31,11 +31,8 @@
 
 - :mailbox:How to reach me: [![Linkedin Badge](https://img.shields.io/badge/-Joshysmart-blue?style=flat&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/joshysmart/)
 
-- 🔭 I’m currently working on improving my skills
-- 🌱 I’m currently learning python.
-- 👯 I’m looking to collaborate on interesting projects
-- 💬 Ask me about anything
-- ⚡ Fun fact: Worldwide Web was programmed with Objective C."
+- ⚡ Fun fact: The Worldwide Web was programmed with Objective C.
+- 💬 Feel free to reach out.
 - Here is a live version of my [portfolio](https://joshysmart.vercel.app/)
 
 ---

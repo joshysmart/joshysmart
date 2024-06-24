@@ -11,15 +11,16 @@ const AboutMe = () => {
           About Me
         </h3>
         <p className="text-lightGray  px-4 md:px-8 text-base font-medium md:text-mdp xl:max-w-2xl xl:p-0">
-          My name is Sani Joshua, a Full-stack developer actively seeking a new
-          opportunity with an exciting company. My expertise lies in crafting
-          modern accessible websites, employing contemporary CSS techniques, and
+          My name is Sani Joshua, a mentor, freelancer, and full-stack/mobile
+          developer. I am actively seeking opportunities to bring ideas to life
+          through code. My expertise lies in crafting modern, accessible
+          websites and mobile apps, employing contemporary CSS techniques, and
           writing clean JavaScript. While my preferred JavaScript framework is
-          React, I am adaptable to using any necessary tools. Located in
-          Nigeria, I am open to remote work and have previous experience
-          collaborating with remote teams. Outside of coding, I enjoy spending
-          time outdoors, listening to music, or watching a movie. Feel free to
-          explore my portfolio to see my work.
+          React/Expo, I am adaptable to using any necessary tools. Located in
+          Nigeria, I am open to remote work and freelance projects, and I have
+          previous experience collaborating with remote and on-site teams.
+          Outside of coding, I enjoy teaching, reading, and listening to music.
+          Feel free to explore my portfolio to see my projects.
         </p>
       </section>
       <div className="right-section px-4 md:px-8 xl:self-end xl:p-0">

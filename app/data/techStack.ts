@@ -10,7 +10,7 @@ const techStack = [
     exp: `${calculateExp(2017)} Years Experience`,
   },
   {
-    tech: "React",
+    tech: "React/Expo",
     exp: `${calculateExp(2019)} Years Experience`,
   },
   {

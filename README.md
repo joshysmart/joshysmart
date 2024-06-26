@@ -25,15 +25,15 @@
 
 ### :woman_technologist: About Me :
 
-- :telescope: I am **joshysmart** a fullstack developer. I build web applications.
+- :telescope: I am **joshysmart** a fullstack web/mobile developer.
 
 - :zap: In my free time, I read tech articles.
 
-- :mailbox:How to reach me: [![Linkedin Badge](https://img.shields.io/badge/-Joshysmart-blue?style=flat&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/joshysmart/)
+- :mailbox: How to reach me: [![Linkedin Badge](https://img.shields.io/badge/-Joshysmart-blue?style=flat&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/joshysmart/)
 
 - ⚡ Fun fact: The Worldwide Web was programmed with Objective C.
 - 💬 Feel free to reach out.
-- Here is a live version of my [portfolio](https://joshysmart.vercel.app/)
+- Here is a live version of my [portfolio](https://www.joshysmart.com/)
 
 ---
 

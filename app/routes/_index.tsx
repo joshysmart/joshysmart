@@ -1,17 +1,19 @@
-import SGMail from "@sendgrid/mail";
+import nodemailer from "nodemailer";
 import type { ActionFunctionArgs } from "@remix-run/node";
 import { json } from "@remix-run/node";
+import { useActionData } from "@remix-run/react";
+import { useRef } from "react";
 import Nav from "../components/nav";
 import Footer from "../components/footer";
-import { useActionData } from "@remix-run/react";
 import Overlay from "../components/overlay";
-import { useRef } from "react";
 import Hero from "../components/hero";
 import Line from "../components/line";
 import TechStack from "../components/tech-stack";
 import AboutMe from "../components/about-me";
 import Experience from "../components/experience";
+import { sendEmail } from "~/utils";
 
+// Validation functions
 const validateName = (name: string) => {
   if (name.length < 3) {
     return "Please use a valid name";
@@ -19,13 +21,8 @@ const validateName = (name: string) => {
 };
 
 const validateEmail = (email: string) => {
-  if (
-    !email
-      .toLowerCase()
-      .match(
-        /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-      )
-  ) {
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailPattern.test(email.toLowerCase())) {
     return "Sorry, invalid format here";
   }
 };
@@ -34,15 +31,12 @@ function badRequest(data: any) {
   return json(data, { status: 400 });
 }
 
+// Action function
 export async function action({ request }: ActionFunctionArgs) {
-  const secretPass: any = process?.env.SMTP_PASSWORD;
-  const from = process?.env.SMTP_FROM;
-  const to: any = process?.env.SMTP_TO;
-
   const formData = await request.formData();
-  const name: any = formData?.get("name");
-  const email: any = formData?.get("email");
-  const message = formData.get("message");
+  const name = formData.get("name") as string;
+  const email = formData.get("email") as string;
+  const message = formData.get("message") as string;
 
   const fields = { name, email, message };
 
@@ -55,29 +49,18 @@ export async function action({ request }: ActionFunctionArgs) {
     return badRequest({ fieldErrors, fields });
   }
 
-  SGMail.setApiKey(secretPass);
-
-  const mailOptions: any = {
-    to: to,
-    from: from,
-    subject: "I have a job for you",
-    text: `${message} from ${email}`,
-    html: `<strong>Message from ${name} ${email} \n ${message}/strong>`,
-  };
-
-  SGMail.send(mailOptions)
-    .then(() => {
-      console.log("Email sent");
-    })
-    .catch((error) => {
-      console.error(error);
-    });
+  await sendEmail({ email: email, body: message, name: name });
 
   return { success: true, fields };
 }
 
+// Index component
 export default function Index() {
-  const actionData = useActionData();
+  const actionData = useActionData<{
+    success?: boolean;
+    fieldErrors?: { name?: string; email?: string };
+    fields?: { name: string; email: string; message: string };
+  }>();
   const wrapperEl = useRef(null);
 
   return (

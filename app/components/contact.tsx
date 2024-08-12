@@ -1,10 +1,12 @@
 import { Form } from "@remix-run/react";
 import Confirmation from "./confirmation";
+import { getMathQuestion } from "../utils";
 
 const Contact = (props: { actionData: any }) => {
   const error = props.actionData?.fieldErrors;
   const user = props.actionData?.fields;
   const success = props.actionData?.success;
+  const { question, answer } = getMathQuestion();
 
   return (
     <div
@@ -80,6 +82,34 @@ const Contact = (props: { actionData: any }) => {
           >
             {error?.email && error?.email}
           </span>
+
+          <label htmlFor="math" className="relative">
+            <input
+              id="math"
+              type="text"
+              name="math"
+              placeholder={question}
+              className={`p-4  text-base font-medium border-b outline-none bg-transparent focus:border-lightGreen w-full ${
+                error?.name && "border-red-500"
+              }`}
+              required
+            />
+            {error?.name && (
+              <span
+                className="block border border-red-500 w-6 h-6 text-center rounded-full text-red-500 absolute right-4 bottom-4"
+                aria-live="polite"
+              >
+                !
+              </span>
+            )}
+          </label>
+          <span
+            className="text-right block mt-1 text-red-500"
+            aria-live="polite"
+          >
+            {error?.capthca && error?.capthca}
+          </span>
+
           <textarea
             name="message"
             id="message"
@@ -89,13 +119,16 @@ const Contact = (props: { actionData: any }) => {
             defaultValue={user?.message}
             required
           ></textarea>
+          <input type="text" name="_honey" hidden />
+          <input type="text" name="_answer" hidden defaultValue={answer} />
+
           <button
             className="self-end border-lightGreen border-b-2 pb-3 hover:text-lightGreen tracking-[.14em]"
             type="submit"
           >
             SEND MESSAGE
           </button>
-          <Confirmation success={success} user={user?.name} />
+          {success && <Confirmation success={success} user={user?.name} />}
         </Form>
       </div>
     </div>
@@ -103,4 +136,3 @@ const Contact = (props: { actionData: any }) => {
 };
 
 export default Contact;
-

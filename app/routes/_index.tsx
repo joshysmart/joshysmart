@@ -1,4 +1,3 @@
-import nodemailer from "nodemailer";
 import type { ActionFunctionArgs } from "@remix-run/node";
 import { json } from "@remix-run/node";
 import { useActionData } from "@remix-run/react";
@@ -37,13 +36,24 @@ export async function action({ request }: ActionFunctionArgs) {
   const name = formData.get("name") as string;
   const email = formData.get("email") as string;
   const message = formData.get("message") as string;
+  const math = formData.get("math") as string;
+  const honeypot = formData.get("_honey") as string;
+  const answer = formData.get("_answer") as string;
 
   const fields = { name, email, message };
 
   const fieldErrors = {
     name: validateName(name),
     email: validateEmail(email),
+    capthca:
+      parseInt(answer) !== parseInt(math)
+        ? "Please solve the math problem"
+        : undefined,
   };
+
+  if (honeypot) {
+    return badRequest({ success: false });
+  }
 
   if (Object.values(fieldErrors).some(Boolean)) {
     return badRequest({ fieldErrors, fields });

@@ -34,3 +34,17 @@ export const sendEmail = async (email: {
     console.error("Error occurred. " + err.message);
   }
 };
+
+export const getMathQuestion = () => {
+  const num1 = Math.floor(Math.random() * 10) + 1;
+  const num2 = Math.floor(Math.random() * 10) + 1;
+  const operation = Math.random() > 0.5 ? "+" : "-";
+
+  const question = `${num1} ${operation} ${num2}`;
+  const answer = operation === "+" ? num1 + num2 : num1 - num2;
+
+  return {
+    question,
+    answer,
+  };
+};

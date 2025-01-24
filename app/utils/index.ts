@@ -22,7 +22,7 @@ export const sendEmail = async (email: {
     to: `Recipient <${process.env.SMTP_TO}>`,
     subject: "I have a job for you 🚀",
     text: `${email.body} from ${email.email}`,
-    html: `<strong>Message from ${email.name} ${email.email} \n ${email.body}</strong>`,
+    html: `<strong>Message from ${email.name} ${email.email} <br/> ${email.body}</strong>`,
   };
 
   try {

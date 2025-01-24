@@ -19,7 +19,8 @@ const Contact = (props: { actionData: any }) => {
         </h2>
         <p className="text-lightGray px-4 text-base font-medium text-center mb-12 md:text-mdp lg:text-left">
           I would love to hear about your project and how I could help. Please
-          fill in the form, and I’ll get back to you as soon as possible.
+          mention my name in your salutation, and I’ll get back to you as soon
+          as possible.
         </p>
       </section>
       <div className="right-section lg:w-2/5 relative">
@@ -113,7 +114,8 @@ const Contact = (props: { actionData: any }) => {
           <textarea
             name="message"
             id="message"
-            placeholder="MESSAGE"
+            placeholder="Hey Joshysmart,"
+            title="Must include joshysmart in your message or salutation"
             className="p-4 text-base font-medium pt-8 outline-none border-b block mb-8 bg-transparent focus:border-lightGreen resize-none"
             rows={4}
             defaultValue={user?.message}
@@ -123,6 +125,7 @@ const Contact = (props: { actionData: any }) => {
           <input type="text" name="_answer" hidden defaultValue={answer} />
 
           <button
+            title="Must include joshysmart in your message or salutation"
             className="self-end border-lightGreen border-b-2 pb-3 hover:text-lightGreen tracking-[.14em]"
             type="submit"
           >

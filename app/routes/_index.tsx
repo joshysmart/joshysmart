@@ -1,5 +1,5 @@
 import type { ActionFunctionArgs } from "@remix-run/node";
-import { json } from "@remix-run/node";
+import { json, redirect } from "@remix-run/node";
 import { useActionData } from "@remix-run/react";
 import { useRef } from "react";
 import Nav from "../components/nav";
@@ -51,8 +51,8 @@ export async function action({ request }: ActionFunctionArgs) {
         : undefined,
   };
 
-  if (honeypot) {
-    return badRequest({ success: false });
+  if (honeypot || !message.toLowerCase().includes("joshysmart")) {
+    return redirect("https://x.com/saniojoshua");
   }
 
   if (Object.values(fieldErrors).some(Boolean)) {
